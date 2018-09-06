@@ -2,18 +2,18 @@ Willkommen zu meinem Repository!
 
 Das gesamte Repo kann ganz einfach geklont werden. Dazu einfach auf https://github.com/TrialAnd404/MyRepo "Clone or Download" klicken und den angegebenen Link zum klonen kopieren.
 
-Änderungen sollen lokal in eigenen, dedizierten Branches vorgenommen werden. Hierzu einfach:
+Ã„nderungen sollen lokal in eigenen, dedizierten Branches vorgenommen werden. Hierzu einfach:
 
 1) master pullen! -> damit man die up-to-date version des mastre zweiges hat
 
-2) neuen branch erstellen! -> möglichst selbsterklärenden namen als branch-name wählen. Git switcht automatisch auf den branch.
+2) neuen branch erstellen! -> mÃ¶glichst selbsterklÃ¤renden namen als branch-name wÃ¤hlen. Git switcht automatisch auf den branch.
 
-3) beliebige Änderungen vornehmen -> Änderungen können später gsammelt eingesehen werden.
+3) beliebige Ã„nderungen vornehmen -> Ã„nderungen kÃ¶nnen spÃ¤ter gsammelt eingesehen werden.
 
-3.1) asuwählen welche changes übernommen werden sollen. nicht übernommene changes verwerfen? (vielleicht lieber in einen neuen branch?)
+3.1) asuwÃ¤hlen welche changes Ã¼bernommen werden sollen. nicht Ã¼bernommene changes verwerfen? (vielleicht lieber in einen neuen branch?)
 
--> Man kann auch absichtlich serperate commits machen um zwischenstände zu dokumentieren!
+-> Man kann auch absichtlich serperate commits machen um zwischenstÃ¤nde zu dokumentieren!
 
-4) Änderungen committen. Bitte auf eine vernünftige beschreibung machen sodass man direkt ersehen kann was warum wo gemacht wurde!
+4) Ã„nderungen committen. Bitte auf eine vernÃ¼nftige beschreibung machen sodass man direkt ersehen kann was warum wo gemacht wurde!
 
-5) pull request erstellen und warten dass eingecheckt wird! NICHT SELBSTSTÄNDIG MERGEN BITTE! Reviewer machen sinn!
+5) pull request erstellen und warten dass eingecheckt wird! WENN MÃ–GLICH NICHT SELBSTSTÃ„NDIG MERGEN BITTE! Reviewer machen sinn!
