@@ -10,6 +10,10 @@ Das gesamte Repo kann ganz einfach geklont werden. Dazu einfach auf https://gith
 
 3) beliebige Änderungen vornehmen -> Änderungen können später gsammelt eingesehen werden.
 
+3.1) asuwählen welche changes übernommen werden sollen. nicht übernommene changes verwerfen? (vielleicht lieber in einen neuen branch?)
+
+-> Man kann auch absichtlich serperate commits machen um zwischenstände zu dokumentieren!
+
 4) Änderungen committen. Bitte auf eine vernünftige beschreibung machen sodass man direkt ersehen kann was warum wo gemacht wurde!
 
 5) pull request erstellen und warten dass eingecheckt wird! NICHT SELBSTSTÄNDIG MERGEN BITTE! Reviewer machen sinn!
