@@ -15,5 +15,10 @@ BenutzerEinstellungen::~BenutzerEinstellungen()
 
 void BenutzerEinstellungen::on_pbBeenden_clicked()
 {
+    qApp->quit();
+}
+
+void BenutzerEinstellungen::on_pbMenue_clicked()
+{
     this->close();
 }

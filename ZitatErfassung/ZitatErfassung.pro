@@ -16,14 +16,32 @@ SOURCES += main.cpp\
         frmmain.cpp \
     hauptmenueuser.cpp \
     hauptmenueadmin.cpp \
-    benutzereinstellungen.cpp
+    benutzereinstellungen.cpp \
+    zitateintragen.cpp \
+    frmanmelden.cpp \
+    frmzitatanzeigen.cpp \
+    frmzitatverwalten.cpp \
+    frmjahrgaengeverwalten.cpp \
+    frmbenutzerverwaltung.cpp
 
 HEADERS  += frmmain.h \
     hauptmenueuser.h \
     hauptmenueadmin.h \
-    benutzereinstellungen.h
+    benutzereinstellungen.h \
+    zitateintragen.h \
+    frmanmelden.h \
+    frmzitatanzeigen.h \
+    frmzitatverwalten.h \
+    frmjahrgaengeverwalten.h \
+    frmbenutzerverwaltung.h
 
 FORMS    += frmmain.ui \
     hauptmenueuser.ui \
     hauptmenueadmin.ui \
-    benutzereinstellungen.ui
+    benutzereinstellungen.ui \
+    zitateintragen.ui \
+    frmanmelden.ui \
+    frmzitatanzeigen.ui \
+    frmzitatverwalten.ui \
+    frmjahrgaengeverwalten.ui \
+    frmbenutzerverwaltung.ui

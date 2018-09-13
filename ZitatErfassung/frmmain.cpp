@@ -4,6 +4,8 @@
 #include <hauptmenueadmin.h>
 #include <benutzereinstellungen.h>
 #include <QMessageBox>
+#include <frmanmelden.h>
+
 
 frmMain::frmMain(QWidget *parent) :
     QMainWindow(parent),
@@ -17,35 +19,19 @@ frmMain::~frmMain()
     delete ui;
 }
 
-void frmMain::on_pbLogin_clicked()
-{
-    QString Benutzername = ui->ldtBenutzername->text();
-    QString Passwort = ui->ldtPasswort->text();
 
-    if(Benutzername == "ADMIN" && Passwort == "1234")
-    {
-        //so öffnet man ein neues Window "Hauptmenü-Admin"
-        this->close();
-        HauptmenueAdmin hauptmenueadmin;
-        hauptmenueadmin.setModal(true);
-        hauptmenueadmin.exec();
-        //MPS
-    }
-    else if(Benutzername=="BENUTZER" && Passwort=="1234")
-    {
-        //so öffnet man ein neues Window "Hauptmenü-User"
-        this->close();
-        HauptmenueUser hauptmenueuser;
-        hauptmenueuser.setModal(true);
-        hauptmenueuser.exec();
-        //MPS
-    }
-    else
-    {
-        QMessageBox msgBox;
-        msgBox.setText("Bitte überprüfen Sie ihre Anmeldedaten");
-        msgBox.exec();
-    }
+
+void frmMain::on_pbStarten_clicked()
+{
+
+
+      //so öffnet man ein neues Window "Hauptmenü-Admin"
+      frmAnmelden frmanmelden;
+      frmanmelden.setModal(true);
+      frmanmelden.exec();
+      //MPS
+
+
 
 
 }
