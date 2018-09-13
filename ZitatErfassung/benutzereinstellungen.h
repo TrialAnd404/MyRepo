@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pbBeenden_clicked();
 
+    void on_pbMenue_clicked();
+
 private:
     Ui::BenutzerEinstellungen *ui;
 };
