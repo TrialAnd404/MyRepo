@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "userlogin.h"
+
 namespace Ui {
 class frmAnmelden;
 }
