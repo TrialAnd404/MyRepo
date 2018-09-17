@@ -1,0 +1,20 @@
+#ifndef BENUTZER_H
+#define BENUTZER_H
+
+#include <QString>
+
+class Benutzer
+{
+private:
+    QString nutzername;
+    QString passwort;
+    QString vorname;
+    QString nachname;
+    QVector eingetrageneZitate;
+    QVector upvote;
+    QVector downvote;
+public:
+    Benutzer();
+};
+
+#endif // BENUTZER_H
