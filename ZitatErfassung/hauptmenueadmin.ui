@@ -52,7 +52,7 @@
     <string>Benutzereinstellungen</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pbMenue">
+  <widget class="QPushButton" name="pbAbmelden">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -62,16 +62,16 @@
     </rect>
    </property>
    <property name="text">
-    <string>Hauptmenü</string>
+    <string>Abmelden</string>
    </property>
   </widget>
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>180</y>
+     <y>176</y>
      <width>411</width>
-     <height>31</height>
+     <height>16</height>
     </rect>
    </property>
    <property name="orientation">

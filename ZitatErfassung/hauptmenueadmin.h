@@ -20,6 +20,20 @@ private slots:
 
     void on_pbBeenden_clicked();
 
+    void on_pbZitatEintragen_clicked();
+
+    void on_pbMenue_clicked();
+
+    void on_pbAbmelden_clicked();
+
+    void on_pbZitatAnzeigen_clicked();
+
+    void on_pbZitatVerwalten_clicked();
+
+    void on_pbJahrgaengeVerwalten_clicked();
+
+    void on_pbBenutzerVerwaltung_clicked();
+
 private:
     Ui::HauptmenueAdmin *ui;
 };
