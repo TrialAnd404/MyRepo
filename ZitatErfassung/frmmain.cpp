@@ -20,18 +20,22 @@ frmMain::~frmMain()
 }
 
 
+/*
+if(frmMain->isVisible()) {
+    //so öffnet man ein neues Window "Hauptmenü-Admin"
+    frmAnmelden frmanmelden;
+    frmanmelden.setModal(true);
+    frmanmelden.exec();
+    //MPS
+}
+*/
 
 void frmMain::on_pbStarten_clicked()
 {
-
-
       //so öffnet man ein neues Window "Hauptmenü-Admin"
       frmAnmelden frmanmelden;
       frmanmelden.setModal(true);
       frmanmelden.exec();
       //MPS
-
-
-
-
 }
+

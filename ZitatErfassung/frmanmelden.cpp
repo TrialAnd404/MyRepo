@@ -3,12 +3,15 @@
 #include <hauptmenueadmin.h>
 #include <hauptmenueuser.h>
 #include <QMessageBox>
+#include "sqlquery.h"
 
 frmAnmelden::frmAnmelden(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::frmAnmelden)
 {
     ui->setupUi(this);
+
+
 }
 
 frmAnmelden::~frmAnmelden()
@@ -18,10 +21,13 @@ frmAnmelden::~frmAnmelden()
 
 void frmAnmelden::on_pbLogin_clicked()
 {
-
     QString Benutzername = ui->ldtBenutzername->text();
     QString Passwort = ui->ldtPasswort->text();
 
+    SQLQuery* pipapo = new SQLQuery();
+    pipapo->datenbankOperation("TEST");
+
+/*
     if(Benutzername == "admin" && Passwort == "1234"){
         //so öffnet man ein neues Window "Hauptmenü-Admin"
         HauptmenueAdmin hauptmenueadmin;
@@ -42,4 +48,5 @@ void frmAnmelden::on_pbLogin_clicked()
         msgBox.setText("Anmeldedaten inkorrekt!");
         msgBox.exec();
     }
+*/
 }

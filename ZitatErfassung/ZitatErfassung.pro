@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -22,7 +23,8 @@ SOURCES += main.cpp\
     frmzitatanzeigen.cpp \
     frmzitatverwalten.cpp \
     frmjahrgaengeverwalten.cpp \
-    frmbenutzerverwaltung.cpp
+    frmbenutzerverwaltung.cpp \
+    sqlquery.cpp
 
 HEADERS  += frmmain.h \
     hauptmenueuser.h \
@@ -33,7 +35,8 @@ HEADERS  += frmmain.h \
     frmzitatanzeigen.h \
     frmzitatverwalten.h \
     frmjahrgaengeverwalten.h \
-    frmbenutzerverwaltung.h
+    frmbenutzerverwaltung.h \
+    sqlquery.h
 
 FORMS    += frmmain.ui \
     hauptmenueuser.ui \

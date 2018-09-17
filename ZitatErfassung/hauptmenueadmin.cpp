@@ -37,7 +37,7 @@ void HauptmenueAdmin::on_pbBeenden_clicked()
 
 void HauptmenueAdmin::on_pbZitatEintragen_clicked()
 {
-    //so öffnet man ein neues Window "Benutzereinstellungen"
+    //so öffnet man ein neues Window "zitateintragen"
     ZitatEintragen zitateintragen;
     zitateintragen.setModal(true);
     zitateintragen.exec();
@@ -86,7 +86,7 @@ void HauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
 
 void HauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
 {
-    //so öffnet man ein neues Window "jahrgaengeverwalten"
+    //so öffnet man ein neues Window "benutzerverwaltung"
     frmBenutzerVerwaltung benutzerverwaltung;
     benutzerverwaltung.setModal(true);
     benutzerverwaltung.exec();
