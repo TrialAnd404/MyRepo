@@ -19,22 +19,15 @@ frmAnmelden::~frmAnmelden()
 void frmAnmelden::on_pbLogin_clicked()
 {
 
-    QString Benutzername = ui->ldtBenutzername->text();
-    QString Passwort = ui->ldtPasswort->text();
+    QString user = ui->ldtBenutzername->text();
+    QString passwrd = ui->ldtPasswort->text();
+    Userlogin* login = new Userlogin;
 
-    if(Benutzername == "admin" && Passwort == "1234"){
-        //so öffnet man ein neues Window "Hauptmenü-Admin"
-        HauptmenueAdmin hauptmenueadmin;
-        hauptmenueadmin.setModal(true);
-        hauptmenueadmin.exec();
-    //MPS
-    }
-    else if(Benutzername == "benutzer" && Passwort == "1234"){
-        //so öffnet man ein neues Window "Hauptmenü-Admin"
+    if (login.checkLoginCredentials(user, passwrd))
+    {
         HauptmenueUser hauptmenueuser;
         hauptmenueuser.setModal(true);
         hauptmenueuser.exec();
-    //MPS
     }
     else
     {
@@ -42,4 +35,5 @@ void frmAnmelden::on_pbLogin_clicked()
         msgBox.setText("Anmeldedaten inkorrekt!");
         msgBox.exec();
     }
+    delete login;
 }

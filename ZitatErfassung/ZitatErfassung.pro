@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     frmzitatanzeigen.cpp \
     frmzitatverwalten.cpp \
     frmjahrgaengeverwalten.cpp \
-    frmbenutzerverwaltung.cpp
+    frmbenutzerverwaltung.cpp \
+    userlogin.cpp
 
 HEADERS  += frmmain.h \
     hauptmenueuser.h \
@@ -33,7 +34,8 @@ HEADERS  += frmmain.h \
     frmzitatanzeigen.h \
     frmzitatverwalten.h \
     frmjahrgaengeverwalten.h \
-    frmbenutzerverwaltung.h
+    frmbenutzerverwaltung.h \
+    userlogin.h
 
 FORMS    += frmmain.ui \
     hauptmenueuser.ui \
