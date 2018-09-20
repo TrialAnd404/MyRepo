@@ -25,9 +25,11 @@ void frmAnmelden::on_pbLogin_clicked()
 
     if (login.checkLoginCredentials(user, passwrd))
     {
+/*
         HauptmenueUser hauptmenueuser;
         hauptmenueuser.setModal(true);
         hauptmenueuser.exec();
+*/
     }
     else
     {

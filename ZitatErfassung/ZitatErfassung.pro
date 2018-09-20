@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     frmzitatverwalten.cpp \
     frmjahrgaengeverwalten.cpp \
     frmbenutzerverwaltung.cpp \
-    userlogin.cpp
+    userlogin.cpp \
+    checkvalidentry.cpp
 
 
 HEADERS  += frmmain.h \
@@ -48,7 +49,8 @@ HEADERS  += frmmain.h \
     frmzitatverwalten.h \
     frmjahrgaengeverwalten.h \
     frmbenutzerverwaltung.h \
-    userlogin.h
+    userlogin.h \
+    checkvalidentry.h
 
 
 FORMS    += frmmain.ui \

@@ -22,3 +22,11 @@ void BenutzerEinstellungen::on_pbMenue_clicked()
 {
     this->close();
 }
+
+void BenutzerEinstellungen::on_pbSpeichern_clicked()
+{
+    CheckValidEntry.CheckValidName(ui->ldtBenutzername);
+    CheckValidEntry.CheckValidPasswrd(ui->ldtPasswort);
+    CheckValidEntry.CheckValidName(ui->ldtNachname);
+    CheckValidEntry.CheckValidName(ui->ldtVorname);
+}

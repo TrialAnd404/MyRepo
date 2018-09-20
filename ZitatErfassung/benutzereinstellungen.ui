@@ -113,6 +113,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="ldtVorname">
    <property name="geometry">
@@ -123,6 +126,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="ldtJahrgang">
    <property name="geometry">
@@ -132,6 +138,9 @@
      <width>113</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="ldtBenutzertyp">
@@ -152,6 +161,9 @@
      <width>113</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="maxLength">
+    <number>16</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="ldtPasswort">
