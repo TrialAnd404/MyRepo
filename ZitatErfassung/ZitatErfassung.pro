@@ -22,7 +22,7 @@ SOURCES += main.cpp\
     orgeinheit.cpp \
     meldung.cpp \
     admin.cpp \
-    frmbenutzerverwaltung.cpp
+    frmbenutzerverwaltung.cpp \
     zitateintragen.cpp \
     frmanmelden.cpp \
     frmzitatanzeigen.cpp \
@@ -41,7 +41,7 @@ HEADERS  += frmmain.h \
     orgeinheit.h \
     meldung.h \
     admin.h \
-    frmbenutzerverwaltung.h
+    frmbenutzerverwaltung.h \
     zitateintragen.h \
     frmanmelden.h \
     frmzitatanzeigen.h \
