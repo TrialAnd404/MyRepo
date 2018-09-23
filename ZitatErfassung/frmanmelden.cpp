@@ -23,13 +23,15 @@ void frmAnmelden::on_pbLogin_clicked()
     QString passwrd = ui->ldtPasswort->text();
     Userlogin* login = new Userlogin;
 
-    if (login.checkLoginCredentials(user, passwrd))
+    if (login->checkLoginCredentials(user, passwrd))
     {
 /*
         HauptmenueUser hauptmenueuser;
         hauptmenueuser.setModal(true);
         hauptmenueuser.exec();
 */
+        //TODO: Etwas in der Art von Username setzen & an die frmMain
+        //weitergeben (bzw das Userhauptmenu)
     }
     else
     {

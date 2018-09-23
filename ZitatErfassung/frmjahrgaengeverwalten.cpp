@@ -22,3 +22,8 @@ void frmJahrgaengeVerwalten::on_pbMenue_clicked()
 {
     this->close();
 }
+
+void frmJahrgaengeVerwalten::on_pbJahrgangHinzu_clicked()
+{
+    //TODO: Check Auf Doppelte Jahrgänge
+}

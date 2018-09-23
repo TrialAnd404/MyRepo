@@ -20,6 +20,8 @@ private slots:
 
     void on_pbMenue_clicked();
 
+    void on_pbJahrgangHinzu_clicked();
+
 private:
     Ui::frmJahrgaengeVerwalten *ui;
 };
