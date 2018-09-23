@@ -13,6 +13,7 @@ HauptmenueUser::HauptmenueUser(QWidget *parent) :
     ui(new Ui::HauptmenueUser)
 {
     ui->setupUi(this);
+    //TODO: User Objekt aus Parametern erstellen?
 }
 
 HauptmenueUser::~HauptmenueUser()
