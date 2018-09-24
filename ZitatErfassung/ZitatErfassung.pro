@@ -28,7 +28,6 @@ SOURCES += main.cpp\
     frmzitatanzeigen.cpp \
     frmzitatverwalten.cpp \
     frmjahrgaengeverwalten.cpp \
-    frmbenutzerverwaltung.cpp \
     userlogin.cpp \
     checkvalidentry.cpp \
     zitatkontrolle.cpp \
@@ -50,7 +49,6 @@ HEADERS  += frmmain.h \
     frmzitatanzeigen.h \
     frmzitatverwalten.h \
     frmjahrgaengeverwalten.h \
-    frmbenutzerverwaltung.h \
     userlogin.h \
     checkvalidentry.h \
     zitatkontrolle.h \
