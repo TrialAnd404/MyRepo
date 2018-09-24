@@ -57,7 +57,6 @@ void Benutzer::setNachname(QString p_nachname)
 {
     this->nachname = p_nachname;
 }
-<<<<<<< HEAD
 
 OrgEinheit Benutzer::getJahrgang()
 {
@@ -69,9 +68,7 @@ void Benutzer::setJahrgang(OrgEinheit p_jahrgang)
     this->jahrgang = p_jahrgang;
 }
 
-=======
 /*
->>>>>>> c4cabc3f52326239aa30f83fa8bb7c675e5a4760
 QVector<Zitat*> Benutzer::getEingetrageneZitate()
 {
     return this->eingetrageneZitate;
