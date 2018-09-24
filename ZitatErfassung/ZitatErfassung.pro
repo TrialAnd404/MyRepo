@@ -32,8 +32,8 @@ SOURCES += main.cpp\
     userlogin.cpp \
     checkvalidentry.cpp \
     zitatkontrolle.cpp \
-    sessioninfo.cpp
-
+    sessioninfo.cpp \
+    sqlquery.cpp
 
 HEADERS  += frmmain.h \
     hauptmenueuser.h \
