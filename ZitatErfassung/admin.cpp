@@ -31,10 +31,14 @@ bool Admin::addMeldung(Meldung* p_meldung)
     bool einzutragen = true;
     for (int i = 0; i < this->meldung.size(); i++)
     {
+<<<<<<< HEAD
         if (this->meldung.value(i)->getID() == p_meldung->getID())
         {
             einzutragen = false;
         }
+=======
+    //    this->meldung.value(i) == // TODO
+>>>>>>> c4cabc3f52326239aa30f83fa8bb7c675e5a4760
     }
     if (einzutragen)
     {

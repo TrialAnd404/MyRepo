@@ -9,7 +9,7 @@
 #include <frmjahrgaengeverwalten.h>
 #include <frmbenutzerverwaltung.h>
 
-HauptmenueAdmin::HauptmenueAdmin(QWidget *parent) :
+HauptmenueAdmin::HauptmenueAdmin(Admin* currentAdmin, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::HauptmenueAdmin)
 {

@@ -28,9 +28,9 @@ bool CheckValidEntry::CheckValidPasswrd(QString p_entry)
     return this->isValid;
 }
 
-bool CheckValidEntry::CheckValidZitat(p_entry)
+bool CheckValidEntry::CheckValidZitat(QString p_entry)
 {
-    if (this->entry.contains("/") || this->entry.contains("*"))
+    if (p_entry.contains("/") || p_entry.contains("*"))
         this->isValid = false;
 
     return this->isValid;
