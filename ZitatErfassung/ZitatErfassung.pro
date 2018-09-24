@@ -30,7 +30,9 @@ SOURCES += main.cpp\
     frmjahrgaengeverwalten.cpp \
     frmbenutzerverwaltung.cpp \
     userlogin.cpp \
-    checkvalidentry.cpp
+    checkvalidentry.cpp \
+    zitatkontrolle.cpp \
+    sessioninfo.cpp
 
 
 HEADERS  += frmmain.h \
@@ -50,7 +52,9 @@ HEADERS  += frmmain.h \
     frmjahrgaengeverwalten.h \
     frmbenutzerverwaltung.h \
     userlogin.h \
-    checkvalidentry.h
+    checkvalidentry.h \
+    zitatkontrolle.h \
+    sessioninfo.h
 
 
 FORMS    += frmmain.ui \

@@ -2,6 +2,7 @@
 #define ZITATEINTRAGEN_H
 
 #include <QDialog>
+#include "zitatkontrolle.h"
 
 namespace Ui {
 class ZitatEintragen;
@@ -19,6 +20,8 @@ private slots:
     void on_pbBeenden_clicked();
 
     void on_pbMenue_clicked();
+
+    void on_pbSpeichern_clicked();
 
 private:
     Ui::ZitatEintragen *ui;

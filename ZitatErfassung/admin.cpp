@@ -28,11 +28,18 @@ void Admin::setMeldung(QVector<Meldung*> p_meldung)
 
 bool Admin::addMeldung(Meldung* p_meldung)
 {
-    bool schonDa = false;
+    bool einzutragen = true;
     for (int i = 0; i < this->meldung.size(); i++)
     {
-        this->meldung.value(i) == // TODO
+        if (this->meldung.value(i)->getID() == p_meldung->getID())
+        {
+            einzutragen = false;
+        }
     }
-    this->meldung.append(p_meldung);
+    if (einzutragen)
+    {
+        this->meldung.append(p_meldung);
+    }
+    return einzutragen;
 }
 
