@@ -22,7 +22,7 @@ private slots:
 
     void on_pbZitatEintragen_clicked();
 
-    void on_pbMenue_clicked();
+    //void on_pbMenue_clicked();
 
     void on_pbAbmelden_clicked();
 

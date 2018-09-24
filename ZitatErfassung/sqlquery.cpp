@@ -1,5 +1,7 @@
 #include "sqlquery.h"
 #include <benutzereinstellungen.h>
+#include <ui_frmmain.h>
+#include <frmmain.h>
 
 SQLQuery::SQLQuery()
 {
@@ -14,26 +16,25 @@ SQLQuery::SQLQuery()
 
 QString SQLQuery::datenbankOperation(QString p_Query)
 {
-    //QString ausgabe;
+    QString ausgabe;
 
+    bool ok;
 
+    ok = db.open();
 
-    db.open();
-
-    QString sqlBefehl ="INSERT INTO tblBenutzerAdmin (Nutzername, Passwort, Vorname, Nachname, Jahrgang) VALUES ('MPS', '1234', 'Pascal', 'Schmotz', '2018');";
+    QString sqlBefehl = "select Nutzername from tblBenutzerAdmin";
     QSqlQuery qry;
-    qry.exec(sqlBefehl);
+    ok = qry.exec(sqlBefehl);
     qDebug() << qry.lastError().text();
 
-
-    db.close();
-/*
-    while(qry.next())
+    ok = qry.first();
+    while (ok)
     {
-        ausgabe = qry.value(0).toString();
+      ausgabe += qry.value(0).toString() + " ";
+      ok = qry.next();
     }
-*/
+    db.close();
 
-
+    return QString(ausgabe);
 
 }

@@ -18,7 +18,7 @@ public:
 private slots:
     void on_pbLogin_clicked();
 
-    void on_pbStarten_clicked();
+
 
 private:
     Ui::frmMain *ui;
