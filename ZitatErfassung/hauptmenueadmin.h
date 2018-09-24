@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "admin.h"
+
 namespace Ui {
 class HauptmenueAdmin;
 }
@@ -12,8 +14,9 @@ class HauptmenueAdmin : public QDialog
     Q_OBJECT
 
 public:
-    explicit HauptmenueAdmin(QWidget *parent = 0);
+    explicit HauptmenueAdmin(Admin* currentAdmin, QWidget *parent = 0);
     ~HauptmenueAdmin();
+    Admin* getCurrentAdmin();
 
 private slots:
     void on_pbBenutzerEinstellungen_clicked();
@@ -36,6 +39,7 @@ private slots:
 
 private:
     Ui::HauptmenueAdmin *ui;
+    Admin* currentAdmin;
 };
 
 #endif // HAUPTMENUEADMIN_H

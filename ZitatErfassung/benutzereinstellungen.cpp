@@ -82,7 +82,7 @@ void BenutzerEinstellungen::on_pbSpeichern_clicked()
     else
     {
         ui->ldtVorname->text().clear();
-        ui->ldtVorname->setText("Ungpltiger Name!");
+        ui->ldtVorname->setText("Ungueltiger Name!");
     }
 
     delete entryCheck;

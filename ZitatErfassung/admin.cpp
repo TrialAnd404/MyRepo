@@ -31,7 +31,7 @@ bool Admin::addMeldung(Meldung* p_meldung)
     bool schonDa = false;
     for (int i = 0; i < this->meldung.size(); i++)
     {
-        this->meldung.value(i) == // TODO
+    //    this->meldung.value(i) == // TODO
     }
     this->meldung.append(p_meldung);
 }

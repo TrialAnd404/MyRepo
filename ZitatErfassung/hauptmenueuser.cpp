@@ -8,7 +8,7 @@
 
 
 
-HauptmenueUser::HauptmenueUser(QWidget *parent) :
+HauptmenueUser::HauptmenueUser(Benutzer* currentUser, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::HauptmenueUser)
 {

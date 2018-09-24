@@ -2,6 +2,7 @@
 #define ZITAT_H
 
 #include <QString>
+#include <QVector>
 #include <QDate>
 #include "benutzer.h"
 #include "orgeinheit.h"

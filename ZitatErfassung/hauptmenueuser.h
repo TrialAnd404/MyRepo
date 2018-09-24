@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "benutzer.h"
+
 namespace Ui {
 class HauptmenueUser;
 }
@@ -12,7 +14,7 @@ class HauptmenueUser : public QDialog
     Q_OBJECT
 
 public:
-    explicit HauptmenueUser(QWidget *parent = 0);
+    explicit HauptmenueUser(Benutzer* currentUser, QWidget *parent = 0);
     ~HauptmenueUser();
 
 private slots:
@@ -30,7 +32,7 @@ private slots:
 
 private:
     Ui::HauptmenueUser *ui;
-//    Benutzer user;
+    Benutzer* currentUser;
 };
 
 #endif // HAUPTMENUEUSER_H

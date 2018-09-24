@@ -37,7 +37,7 @@ void OrgEinheit::setJahr(QString p_jahr)
     this->jahr = p_jahr;
 }
 
-QVector<Zitat *> OrgEinheit::getZitate()
+/*QVector<Zitat *> OrgEinheit::getZitate()
 {
     return this->zitate;
 }
@@ -46,3 +46,4 @@ void OrgEinheit::setZitate(QVector<Zitat *> p_zitate)
 {
     this->zitate = p_zitate;
 }
+*/

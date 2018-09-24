@@ -57,7 +57,7 @@ void Benutzer::setNachname(QString p_nachname)
 {
     this->nachname = p_nachname;
 }
-
+/*
 QVector<Zitat*> Benutzer::getEingetrageneZitate()
 {
     return this->eingetrageneZitate;
@@ -88,3 +88,4 @@ void Benutzer::setDownvote(QVector<Zitat*> p_downvote)
     this->downvote = p_downvote;
 }
 
+*/
