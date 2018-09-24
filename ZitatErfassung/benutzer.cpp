@@ -1,11 +1,12 @@
 #include "benutzer.h"
 
-Benutzer::Benutzer(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname)
+Benutzer::Benutzer(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, OrgEinheit* p_jahrgang)
 {
     this->nutzername = p_nutzername;
     this->passwort = p_passwort;
     this->vorname = p_vorname;
     this->nachname = p_nachname;
+    this->jahrgang = p_jahrgang;
 }
 
 int Benutzer::getID()
@@ -58,12 +59,12 @@ void Benutzer::setNachname(QString p_nachname)
     this->nachname = p_nachname;
 }
 
-OrgEinheit Benutzer::getJahrgang()
+OrgEinheit* Benutzer::getJahrgang()
 {
     return this->jahrgang;
 }
 
-void Benutzer::setJahrgang(OrgEinheit p_jahrgang)
+void Benutzer::setJahrgang(OrgEinheit* p_jahrgang)
 {
     this->jahrgang = p_jahrgang;
 }

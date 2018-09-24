@@ -2,8 +2,10 @@
 #define ZITATKONTROLLE_H
 
 #include <QString>
+#include <QDate>
 #include "orgeinheit.h"
 #include "sessioninfo.h"
+#include "zitat.h"
 
 class ZitatKontrolle
 {

@@ -6,7 +6,7 @@ ZitatEintragen::ZitatEintragen(QWidget *parent) :
     ui(new Ui::ZitatEintragen)
 {
     ui->setupUi(this);
-    zk = new Zitatkontrolle();
+    zk = new ZitatKontrolle();
 }
 
 ZitatEintragen::~ZitatEintragen()
@@ -26,7 +26,7 @@ void ZitatEintragen::on_pbMenue_clicked()
 
 void ZitatEintragen::on_pbSpeichern_clicked()
 {
-    bool klappt = zk.legeZitatAn(ui->edtZitat->text(),ui->edtRedner->text(),ui->deDatum->date(), ui->cbOrgEinheit->currentText());
+    bool klappt = zk->legeZitatAn(ui->edtZitat->text(),ui->edtRedner->text(),ui->deDatum->date(), ui->cbOrgEinheit->currentText());
     if (klappt)
     {
 

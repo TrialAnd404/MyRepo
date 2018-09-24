@@ -11,7 +11,7 @@ private:
     bool super;
     QVector<Meldung*> meldung;
 public:
-    Admin(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, bool p_super);
+    Admin(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, OrgEinheit* p_jahrgang, bool p_super);
     bool getSuper();
     void setSuper(bool p_super);
     QVector<Meldung*> getMeldung();

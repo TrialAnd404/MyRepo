@@ -25,6 +25,7 @@ private slots:
 
 private:
     Ui::ZitatEintragen *ui;
+    ZitatKontrolle* zk;
 };
 
 #endif // ZITATEINTRAGEN_H

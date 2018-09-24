@@ -1,12 +1,12 @@
 #include "sessioninfo.h"
 
-SessionInfo SessionInfo::getSessionInfo()
+SessionInfo* SessionInfo::getSessionInfo()
 {
-    if (!this->dieses)
+    if (SessionInfo::dieses)
     {
-        this->dieses = new SessionInfo();
+        SessionInfo::dieses = new SessionInfo();
     }
-    return dieses;
+    return SessionInfo::dieses;
 }
 
 SessionInfo::SessionInfo()

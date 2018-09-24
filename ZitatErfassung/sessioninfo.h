@@ -6,7 +6,7 @@
 class SessionInfo
 {
 public:
-    static SessionInfo getSessionInfo();
+    static SessionInfo* getSessionInfo();
     Benutzer* getAktNutzer();
     void setAktNutzer(Benutzer* p_nutzer);
 private:
