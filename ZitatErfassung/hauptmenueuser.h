@@ -30,6 +30,7 @@ private slots:
 
 private:
     Ui::HauptmenueUser *ui;
+//    Benutzer user;
 };
 
 #endif // HAUPTMENUEUSER_H

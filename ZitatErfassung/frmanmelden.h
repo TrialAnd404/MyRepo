@@ -4,6 +4,8 @@
 #include <QDialog>
 
 #include "userlogin.h"
+#include "hauptmenueadmin.h"
+#include "hauptmenueuser.h"
 
 namespace Ui {
 class frmAnmelden;
