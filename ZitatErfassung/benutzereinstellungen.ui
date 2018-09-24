@@ -113,6 +113,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="ldtVorname">
    <property name="geometry">
@@ -123,6 +126,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="ldtJahrgang">
    <property name="geometry">
@@ -132,6 +138,9 @@
      <width>113</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="ldtBenutzertyp">
@@ -152,6 +161,9 @@
      <width>113</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="maxLength">
+    <number>16</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="ldtPasswort">
@@ -227,6 +239,84 @@
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblWarnName">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>30</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblWarnSurname">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>90</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>120</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblWarnUsername">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>150</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblWarnPasswrd">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>180</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

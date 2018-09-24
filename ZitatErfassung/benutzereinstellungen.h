@@ -3,6 +3,10 @@
 
 #include <QDialog>
 
+#include "checkvalidentry.h"
+
+//TODO: include datenbankverbindung -> für speichern
+
 namespace Ui {
 class BenutzerEinstellungen;
 }
@@ -20,6 +24,7 @@ private slots:
 
     void on_pbMenue_clicked();
 
+    void on_pbSpeichern_clicked();
 private:
     Ui::BenutzerEinstellungen *ui;
 };
