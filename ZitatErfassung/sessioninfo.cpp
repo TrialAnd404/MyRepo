@@ -1,15 +1,27 @@
 #include "sessioninfo.h"
 
+SessionInfo* SessionInfo::dieses;
+
+SessionInfo::SessionInfo()
+{
+
+}
+
 SessionInfo* SessionInfo::getSessionInfo()
 {
-    if (SessionInfo::dieses)
+    if (!SessionInfo::dieses)
     {
         SessionInfo::dieses = new SessionInfo();
     }
     return SessionInfo::dieses;
 }
 
-SessionInfo::SessionInfo()
+Benutzer *SessionInfo::getAktNutzer()
 {
+    return this->aktNutzer;
+}
 
+void SessionInfo::setAktNutzer(Benutzer *p_nutzer)
+{
+    this->aktNutzer = p_nutzer;
 }
