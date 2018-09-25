@@ -82,7 +82,10 @@ void HauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
     //MPS
 }
 
-
+void HauptmenueAdmin::on_pbMenue_clicked()
+{
+    //TODO
+}
 
 void HauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
 {

@@ -65,3 +65,8 @@ void HauptmenueUser::on_pbBenutzerEinstellungen_clicked()
     benutzereinstellungen.exec();
     //MPS
 }
+
+void HauptmenueUser::on_pbMenue_clicked()
+{
+    //TODO
+}

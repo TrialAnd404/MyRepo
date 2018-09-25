@@ -6,7 +6,7 @@
 #ifndef SQLQUERY_H
 #define SQLQUERY_H
 
-#include <QtSql>
+#include "QtSql"
 
 class SQLQuery
 {
