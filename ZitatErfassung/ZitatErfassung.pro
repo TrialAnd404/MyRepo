@@ -28,12 +28,11 @@ SOURCES += main.cpp\
     frmzitatanzeigen.cpp \
     frmzitatverwalten.cpp \
     frmjahrgaengeverwalten.cpp \
-    frmbenutzerverwaltung.cpp \
     userlogin.cpp \
     checkvalidentry.cpp \
     zitatkontrolle.cpp \
-    sessioninfo.cpp
-
+    sessioninfo.cpp \
+    sqlquery.cpp
 
 HEADERS  += frmmain.h \
     hauptmenueuser.h \
@@ -50,7 +49,6 @@ HEADERS  += frmmain.h \
     frmzitatanzeigen.h \
     frmzitatverwalten.h \
     frmjahrgaengeverwalten.h \
-    frmbenutzerverwaltung.h \
     userlogin.h \
     checkvalidentry.h \
     zitatkontrolle.h \
