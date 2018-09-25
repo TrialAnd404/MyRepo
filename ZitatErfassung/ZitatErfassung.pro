@@ -52,7 +52,8 @@ HEADERS  += frmmain.h \
     userlogin.h \
     checkvalidentry.h \
     zitatkontrolle.h \
-    sessioninfo.h
+    sessioninfo.h \
+    sqlquery.h
 
 
 FORMS    += frmmain.ui \
