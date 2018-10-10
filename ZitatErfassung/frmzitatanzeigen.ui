@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>369</height>
+    <width>421</width>
+    <height>648</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pbBeenden">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>339</y>
+     <x>275</x>
+     <y>614</y>
      <width>131</width>
      <height>31</height>
     </rect>
@@ -55,8 +55,8 @@
   <widget class="QPushButton" name="pbMenue">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>339</y>
+     <x>5</x>
+     <y>614</y>
      <width>131</width>
      <height>31</height>
     </rect>
@@ -68,8 +68,8 @@
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>320</y>
+     <x>5</x>
+     <y>595</y>
      <width>411</width>
      <height>16</height>
     </rect>
@@ -114,21 +114,11 @@
     <string>Suchen</string>
    </property>
   </widget>
-  <widget class="QListView" name="lwZitate">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>361</width>
-     <height>201</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pbExport">
    <property name="geometry">
     <rect>
-     <x>305</x>
-     <y>295</y>
+     <x>310</x>
+     <y>570</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -136,6 +126,45 @@
    <property name="text">
     <string>Export</string>
    </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>90</y>
+     <width>371</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="3">
+     <widget class="QListWidget" name="lwAusgabe"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="btnPrev">
+      <property name="text">
+       <string>Vorherige</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="lblSeite">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Seite 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="btnNext">
+      <property name="text">
+       <string>Nächste</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

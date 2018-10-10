@@ -17,3 +17,18 @@ void frmZitatVerwalten::on_pbMenue_clicked()
 {
     this->close();
 }
+
+void frmZitatVerwalten::on_pbSpeichern_clicked()
+{
+
+}
+
+void frmZitatVerwalten::on_pbLoeschen_clicked()
+{
+
+}
+
+void frmZitatVerwalten::on_pbSuchen_clicked()
+{
+
+}

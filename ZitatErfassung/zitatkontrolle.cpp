@@ -5,6 +5,11 @@ ZitatKontrolle::ZitatKontrolle()
 
 }
 
+ZitatKontrolle::~ZitatKontrolle()
+{
+
+}
+
 bool ZitatKontrolle::legeZitatAn(QString p_zitat, QString p_redner, QDate p_datum, QString p_org)
 {
     int id = 100; //aus DB
@@ -18,5 +23,5 @@ QVector<Zitat*> ZitatKontrolle::holeZitate(OrgEinheit *p_jahrgang)
 {
     int orgID = p_jahrgang->getID();
     //SQL Query
-
+    // return;
 }

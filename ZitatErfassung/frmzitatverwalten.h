@@ -18,6 +18,12 @@ public:
 private slots:
     void on_pbMenue_clicked();
 
+    void on_pbSpeichern_clicked();
+
+    void on_pbLoeschen_clicked();
+
+    void on_pbSuchen_clicked();
+
 private:
     Ui::frmZitatVerwalten *ui;
 };

@@ -11,6 +11,7 @@ ZitatEintragen::ZitatEintragen(QWidget *parent) :
 
 ZitatEintragen::~ZitatEintragen()
 {
+    delete zk;
     delete ui;
 }
 

@@ -11,6 +11,7 @@ class ZitatKontrolle
 {
 public:
     ZitatKontrolle();
+    ~ZitatKontrolle();
     bool legeZitatAn(QString p_zitat, QString p_redner, QDate p_datum, QString p_org);
     QVector<Zitat*> holeZitate(OrgEinheit* p_jahrgang);
 };
