@@ -3,7 +3,12 @@
 
 #include <QDialog>
 #include "zitatkontrolle.h"
+#include "frmmeldezitat.h"
 
+/*
+ * Oberflaeche zum Anzeigen der Zitate
+ * Autor: Lars
+ */
 namespace Ui {
 class frmZitatAnzeigen;
 }
@@ -26,6 +31,10 @@ private slots:
     void on_btnPrev_clicked();
 
     void on_pbSuchen_clicked();
+
+    void on_btnMelden_clicked();
+
+    void on_pbExport_clicked();
 
 private:
     Ui::frmZitatAnzeigen *ui;

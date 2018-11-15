@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmZitatAendern</class>
+ <widget class="QDialog" name="frmZitatAendern">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>20</y>
+     <width>251</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblEingetragenVon">
+      <property name="text">
+       <string>Eingetragen von</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="edtEingetragenVon"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblOrgEinheit">
+      <property name="text">
+       <string>OrgEinheit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="edtOrgEinheit"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="lblDatum">
+      <property name="text">
+       <string>Datum</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QDateEdit" name="deDatum"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblRedner">
+      <property name="text">
+       <string>Redner</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="edtRedner"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="lblZitat">
+      <property name="text">
+       <string>Zitat</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="edtZitat"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="btnZurueck">
+      <property name="text">
+       <string>Zurück</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="btnAendern">
+      <property name="text">
+       <string>Ändern</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

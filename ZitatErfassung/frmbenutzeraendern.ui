@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmBenutzerAendern</class>
+ <widget class="QDialog" name="frmBenutzerAendern">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>404</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>71</y>
+     <width>251</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblVorname">
+      <property name="text">
+       <string>Vorname:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="edtVorname"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblNachname">
+      <property name="text">
+       <string>Nachname:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="edtNachname"/>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QLabel" name="lblBenutzername">
+      <property name="text">
+       <string>Benutzername:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="edtBenutzername"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblPasswort">
+      <property name="text">
+       <string>Passwort:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="edtPasswort"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="lblOrgEinheit">
+      <property name="text">
+       <string>OrgEinheit:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QComboBox" name="cbOrgEinheit"/>
+    </item>
+    <item row="5" column="1" colspan="2">
+     <widget class="QCheckBox" name="cbAdmin">
+      <property name="text">
+       <string>Admin</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QPushButton" name="btnZurueck">
+      <property name="text">
+       <string>Zurück</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="btnSpeichern">
+      <property name="text">
+       <string>Speichern</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

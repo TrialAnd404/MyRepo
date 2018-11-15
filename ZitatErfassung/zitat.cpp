@@ -1,15 +1,41 @@
 #include "zitat.h"
 
+/*
+ * Standardkonstruktor
+ * Autor: Lars
+ */
+Zitat::Zitat()
+{
+
+}
+
+/*
+ * Konstruktor
+ * Autor: Lars
+ */
 Zitat::Zitat(int p_id, QString p_redner, QString p_inhalt, OrgEinheit* p_kurs_jahrgang, QDate p_datum, Benutzer* p_eingetragenVon)
 {
     this->id = p_id;
     this->redner = p_redner;
     this->inhalt = p_inhalt;
-    this->kurs_jahrgang = p_kurs_jahrgang;
+    this->orgEinheit = p_kurs_jahrgang;
     this->datum = p_datum;
     this->eingetragenVon = p_eingetragenVon;
 }
 
+/*
+ * Destruktor
+ * Autor: Lars
+ */
+Zitat::~Zitat()
+{
+
+}
+
+/*
+ * Setter und Getter
+ * Autor: Lars
+ */
 int Zitat::getID()
 {
     return this->id;
@@ -40,14 +66,14 @@ void Zitat::setInhalt(QString p_inhalt)
     this->inhalt = p_inhalt;
 }
 
-OrgEinheit *Zitat::getKurs_Jahrgang()
+OrgEinheit *Zitat::getOrgEinheit()
 {
-    return this->kurs_jahrgang;
+    return this->orgEinheit;
 }
 
-void Zitat::setKurs_Jahrgang(OrgEinheit *p_kurs_jahrgang)
+void Zitat::setOrgEinheit(OrgEinheit *p_orgEinheit)
 {
-    this->kurs_jahrgang = p_kurs_jahrgang;
+    this->orgEinheit = p_orgEinheit;
 }
 
 QDate Zitat::getDatum()

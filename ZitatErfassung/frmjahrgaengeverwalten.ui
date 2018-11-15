@@ -26,7 +26,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="lblTitel">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -78,136 +78,78 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>50</y>
-     <width>121</width>
-     <height>16</height>
+     <y>40</y>
+     <width>351</width>
+     <height>411</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Jahrgang hinzufügen:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ldtJahrgangHinzu">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>50</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbJahrgangHinzu">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>80</y>
-     <width>161</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Jahrgang hinzufügen</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>120</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Jahrgang:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="cmbJahrgang">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>120</y>
-     <width>161</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>291</width>
-     <height>211</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbSpeichern">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>380</y>
-     <width>111</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Speichern</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbLoeschen">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>380</y>
-     <width>111</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Löschen</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>422</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Kurs hinzufügen:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pbKursHinzu">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>450</y>
-     <width>111</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Kurs hinzufügen</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ldtKursHinzu">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>420</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="lblBezeichnung">
+      <property name="text">
+       <string>Bezeichnung</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLineEdit" name="edtBezeichnung"/>
+    </item>
+    <item row="1" column="2" colspan="2">
+     <widget class="QLineEdit" name="edtJahr"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblSuchwort">
+      <property name="text">
+       <string>Suchwort:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QLineEdit" name="edtSuche"/>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="pbSuchen">
+      <property name="text">
+       <string>Suchen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="4">
+     <widget class="QListWidget" name="lwAusgabe"/>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QPushButton" name="pbAendern">
+      <property name="text">
+       <string>Ändern</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="lblJahr">
+      <property name="text">
+       <string>Jahr</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="4">
+     <widget class="QPushButton" name="pbJahrgangHinzu">
+      <property name="text">
+       <string>Jahrgang hinzufügen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2" colspan="2">
+     <widget class="QPushButton" name="pbLoeschen">
+      <property name="text">
+       <string>Löschen</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -1,28 +1,26 @@
-#ifndef HAUPTMENUEUSER_H
-#define HAUPTMENUEUSER_H
+#ifndef FRMHAUPTMENUEUSER_H
+#define FRMHAUPTMENUEUSER_H
 
 #include <QDialog>
 
 #include "benutzer.h"
 
 namespace Ui {
-class HauptmenueUser;
+class frmHauptmenueUser;
 }
 
-class HauptmenueUser : public QDialog
+class frmHauptmenueUser : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit HauptmenueUser(Benutzer* currentUser, QWidget *parent = 0);
-    ~HauptmenueUser();
+    explicit frmHauptmenueUser(Benutzer* currentUser, QWidget *parent = 0);
+    ~frmHauptmenueUser();
 
 private slots:
     void on_pbBeenden_clicked();
 
     void on_pbZitatEintragen_clicked();
-
-    void on_pbMenue_clicked();
 
     void on_pbAbmelden_clicked();
 
@@ -31,8 +29,8 @@ private slots:
     void on_pbBenutzerEinstellungen_clicked();
 
 private:
-    Ui::HauptmenueUser *ui;
+    Ui::frmHauptmenueUser *ui;
     Benutzer* currentUser;
 };
 
-#endif // HAUPTMENUEUSER_H
+#endif // FRMHAUPTMENUEUSER_H

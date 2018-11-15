@@ -3,6 +3,10 @@
 
 #include "benutzer.h"
 
+/*
+ * Klasse zum Speichern Sessionrelevanter Infos - Singleton
+ * Autor: Lars
+ */
 class SessionInfo
 {
 public:

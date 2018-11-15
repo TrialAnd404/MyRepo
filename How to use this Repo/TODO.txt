@@ -1,0 +1,7 @@
+Pflicht:
+	Anzeigen der Meldungen
+	De-/Aktivieren von Benutzern
+	Benutzerimport
+	Zitatexport
+Kann:
+	Voting

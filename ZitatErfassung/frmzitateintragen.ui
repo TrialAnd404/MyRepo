@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ZitatEintragen</class>
- <widget class="QDialog" name="ZitatEintragen">
+ <class>frmZitatEintragen</class>
+ <widget class="QDialog" name="frmZitatEintragen">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="lblZitat">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -38,7 +38,7 @@
     <string>Zitat:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="lblRedner">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -51,7 +51,7 @@
     <string>Redner:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="lblDatum">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -64,7 +64,7 @@
     <string>Datum:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="lblOrgEinheit">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -74,7 +74,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Kurs:</string>
+    <string>OrgEinheit:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="edtZitat">
@@ -107,16 +107,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="cbOrgEinheit">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>150</y>
-     <width>111</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
@@ -130,7 +120,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="lblTitel">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -197,6 +187,16 @@
    <property name="icon">
     <iconset>
      <normaloff>Bilder/Download.png</normaloff>Bilder/Download.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edtOrgEinheit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>150</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>

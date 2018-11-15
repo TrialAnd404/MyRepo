@@ -1,5 +1,11 @@
 #include "admin.h"
 
+Admin::Admin()
+    : Benutzer::Benutzer()
+{
+
+}
+
 Admin::Admin(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, OrgEinheit* p_jahrgang, bool p_super)
     : Benutzer::Benutzer(p_nutzername, p_passwort, p_vorname, p_nachname, p_jahrgang)
 {

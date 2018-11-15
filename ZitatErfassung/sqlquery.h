@@ -10,35 +10,55 @@
 #include "zitat.h"
 #include "meldung.h"
 #include "orgeinheit.h"
+#include "sessioninfo.h"
 
 #include "QDate"
 #include "QtSql"
 #include "QObject"
 #include "QVector"
 
+/*
+ * Klasse zur Verbindung der Datenbank - Singleton
+ * Autor: Lars
+ */
 class SQLQuery
 {
 private:
     QSqlDatabase db;
     int holeID();
+    static SQLQuery* singleton;
 public:
     SQLQuery();
+    ~SQLQuery();
 
-    QVector<QObject*> dbSelect(QString _from, QString _content, QString _valueString);
-    QVector<QObject*> dbSelect(QString _from, QString _content, int _valueInt);
+    static SQLQuery* getDBConnector();
+
+    QVector<Admin*> dbSelectAdmin(QString _content = "alle", QString _value = "alle");
+    QVector<Benutzer*> dbSelectBenutzer(QString _content = "alle", QString _value = "alle");
+    QVector<Zitat*> dbSelectZitat(QString _content = "alle", QString _value = "alle");
+    QVector<Meldung*> dbSelectMeldung(QString _content = "alle", QString _value = "alle");
+    QVector<OrgEinheit*> dbSelectOrgEinheit(QString _content = "alle", QString _value = "alle");
 
     bool dbCheckExisting(QString _stringInQuestion, QString _tblInQuestion, QString _tblContentInQuestion, bool _exactMatch);
     bool checkAlreadyVoted(int _benutzerID, int _zitatID);
 
     int getLastID();
 
-    bool dbInsertAdmin(QString _nutzername, QString _passwort, QString _vorname, QString _nachname, int _jahrgangID);
+    bool dbUpdateAdmin(Admin* _admin, int _id);
+    bool dbUpdateBenutzer(Benutzer* _benutzer, int _id);
+    bool dbUpdateMeldung(Meldung* _meldung, int _id);
+    bool dbUpdateOrgEinheit(OrgEinheit* _orgEinheit, int _id);
+    bool dbUpdateZitat(Zitat* _zitat, int _id);
+
+    bool dbInsertAdmin(Admin* _admin);
     bool dbInsertAdminMeldung(int _adminId, int _meldungID);
-    bool dbInsertBenutzer(QString _nutzername, QString _passwort, QString _vorname, QString _nachname, int _jahrgangID);
-    bool dbInsertMeldung(int _zitatID, QString _grund, int _senderID);
-    bool dbInsertOrg(QString _bezeichnung, int _jahr);
+    bool dbInsertBenutzer(Benutzer* _benutzer);
+    bool dbInsertMeldung(Meldung* _meldung);
+    bool dbInsertOrg(OrgEinheit* _orgEinheit);
     bool dbInsertVote(bool _upvote, int _benutzerID, int _zitatID);
-    bool dbInsertZitat(QString _redner, QString _inhalt, QString _kurs, QDate _datum);
+    bool dbInsertZitat(Zitat* _zitat);
+
+    bool dbDelete(QString _table, int _id);
 };
 
 #endif // SQLQUERY_H

@@ -1,7 +1,7 @@
-#include "hauptmenueadmin.h"
-#include "ui_hauptmenueadmin.h"
-#include <benutzereinstellungen.h>
-#include <zitateintragen.h>
+#include "frmhauptmenueadmin.h"
+#include "ui_frmhauptmenueadmin.h"
+#include <frmbenutzereinstellungen.h>
+#include <frmzitateintragen.h>
 #include <frmmain.h>
 #include <frmanmelden.h>
 #include <frmzitatanzeigen.h>
@@ -9,43 +9,43 @@
 #include <frmjahrgaengeverwalten.h>
 #include <frmbenutzerverwaltung.h>
 
-HauptmenueAdmin::HauptmenueAdmin(Admin* currentAdmin, QWidget *parent) :
+frmHauptmenueAdmin::frmHauptmenueAdmin(Admin* currentAdmin, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::HauptmenueAdmin)
+    ui(new Ui::frmHauptmenueAdmin)
 {
     ui->setupUi(this);
 }
 
-HauptmenueAdmin::~HauptmenueAdmin()
+frmHauptmenueAdmin::~frmHauptmenueAdmin()
 {
     delete ui;
 }
 
-void HauptmenueAdmin::on_pbBenutzerEinstellungen_clicked()
+void frmHauptmenueAdmin::on_pbBenutzerEinstellungen_clicked()
 {
     //so öffnet man ein neues Window "Benutzereinstellungen"
-    BenutzerEinstellungen benutzereinstellungen;
+    frmBenutzerEinstellungen benutzereinstellungen;
     benutzereinstellungen.setModal(true);
     benutzereinstellungen.exec();
     //MPS
 }
 
-void HauptmenueAdmin::on_pbBeenden_clicked()
+void frmHauptmenueAdmin::on_pbBeenden_clicked()
 {
     qApp->quit();
 }
 
-void HauptmenueAdmin::on_pbZitatEintragen_clicked()
+void frmHauptmenueAdmin::on_pbZitatEintragen_clicked()
 {
     //so öffnet man ein neues Window "Benutzereinstellungen"
-    ZitatEintragen zitateintragen;
+    frmZitatEintragen zitateintragen;
     zitateintragen.setModal(true);
     zitateintragen.exec();
     //MPS
 }
 
 
-void HauptmenueAdmin::on_pbAbmelden_clicked()
+void frmHauptmenueAdmin::on_pbAbmelden_clicked()
 {
     this->close();
     //so öffnet man ein neues Window "frmmain" (Anmeldemaske)
@@ -55,7 +55,7 @@ void HauptmenueAdmin::on_pbAbmelden_clicked()
     //MPS
 }
 
-void HauptmenueAdmin::on_pbZitatAnzeigen_clicked()
+void frmHauptmenueAdmin::on_pbZitatAnzeigen_clicked()
 {
     //so öffnet man ein neues Window "zitatanzeigen"
     frmZitatAnzeigen zitatanzeigen;
@@ -64,7 +64,7 @@ void HauptmenueAdmin::on_pbZitatAnzeigen_clicked()
     //MPS
 }
 
-void HauptmenueAdmin::on_pbZitatVerwalten_clicked()
+void frmHauptmenueAdmin::on_pbZitatVerwalten_clicked()
 {
     //so öffnet man ein neues Window "zitatverwalten"
     frmZitatVerwalten zitatverwalten;
@@ -73,7 +73,7 @@ void HauptmenueAdmin::on_pbZitatVerwalten_clicked()
     //MPS
 }
 
-void HauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
+void frmHauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
 {
     //so öffnet man ein neues Window "jahrgaengeverwalten"
     frmJahrgaengeVerwalten jahrgaengeverwalten;
@@ -82,12 +82,7 @@ void HauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
     //MPS
 }
 
-void HauptmenueAdmin::on_pbMenue_clicked()
-{
-    //TODO
-}
-
-void HauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
+void frmHauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
 {
     //so öffnet man ein neues Window "jahrgaengeverwalten"
     frmBenutzerVerwaltung benutzerverwaltung;

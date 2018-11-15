@@ -1,21 +1,21 @@
-#ifndef HAUPTMENUEADMIN_H
-#define HAUPTMENUEADMIN_H
+#ifndef FRMHAUPTMENUEADMIN_H
+#define FRMHAUPTMENUEADMIN_H
 
 #include <QDialog>
 
 #include "admin.h"
 
 namespace Ui {
-class HauptmenueAdmin;
+class frmHauptmenueAdmin;
 }
 
-class HauptmenueAdmin : public QDialog
+class frmHauptmenueAdmin : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit HauptmenueAdmin(Admin* currentAdmin, QWidget *parent = 0);
-    ~HauptmenueAdmin();
+    explicit frmHauptmenueAdmin(Admin* currentAdmin, QWidget *parent = 0);
+    ~frmHauptmenueAdmin();
     Admin* getCurrentAdmin();
 
 private slots:
@@ -24,8 +24,6 @@ private slots:
     void on_pbBeenden_clicked();
 
     void on_pbZitatEintragen_clicked();
-
-    void on_pbMenue_clicked();
 
     void on_pbAbmelden_clicked();
 
@@ -38,8 +36,8 @@ private slots:
     void on_pbBenutzerVerwaltung_clicked();
 
 private:
-    Ui::HauptmenueAdmin *ui;
+    Ui::frmHauptmenueAdmin *ui;
     Admin* currentAdmin;
 };
 
-#endif // HAUPTMENUEADMIN_H
+#endif // FRMHAUPTMENUEADMIN_H
