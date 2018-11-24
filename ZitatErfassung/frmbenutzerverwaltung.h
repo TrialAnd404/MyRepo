@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "benutzerkontrolle.h"
 #include "frmbenutzeraendern.h"
+#include "frmbenutzerimport.h"
 
 /*
  * Oberfläche zum Verwalten aller Benutzer
@@ -33,6 +34,8 @@ private slots:
     void on_pbLoeschen_clicked();
 
     void on_pbSuchen_clicked();
+
+    void on_btnImport_clicked();
 
 private:
     Ui::frmBenutzerVerwaltung *ui;

@@ -51,9 +51,13 @@ void frmBenutzerAendern::on_btnZurueck_clicked()
  */
 void frmBenutzerAendern::on_btnSpeichern_clicked()
 {
+    bool erfolg = false;
     if(neu)
     {
-        this->benKontr->addBenutzer(ui->edtVorname->text(),ui->edtNachname->text(),this->oeListe[ui->cbOrgEinheit->currentIndex()],ui->edtBenutzername->text(),ui->edtPasswort->text(), ui->cbAdmin->isChecked());
+        if (this->benKontr->addBenutzer(ui->edtVorname->text(),ui->edtNachname->text(),this->oeListe[ui->cbOrgEinheit->currentIndex()],ui->edtBenutzername->text(),ui->edtPasswort->text(), ui->cbAdmin->isChecked()))
+        {
+            erfolg = true;
+        }
     }
     else
     {
@@ -66,7 +70,18 @@ void frmBenutzerAendern::on_btnSpeichern_clicked()
         {
             this->ben->setAdmin(true);
         }
-        this->benKontr->updateBenutzer(ben);
+        if (ui->cbDeaktiviert->isChecked())
+        {
+            this->ben->setDeaktiviert(true);
+        }
+        if (this->benKontr->updateBenutzer(ben))
+        {
+            erfolg = true;
+        }
+    }
+    if(erfolg)
+    {
+        this->close();
     }
 }
 
@@ -80,6 +95,7 @@ void frmBenutzerAendern::fuelleUI()
     ui->edtNachname->setText(this->ben->getNachname());
     ui->edtBenutzername->setText(this->ben->getNutzername());
     ui->edtPasswort->setText(this->ben->getPasswort());
+    ui->edtPasswort->setEchoMode(QLineEdit::Password);
     if ( this->ben->getAdmin())
     {
         ui->cbAdmin->setChecked(true);

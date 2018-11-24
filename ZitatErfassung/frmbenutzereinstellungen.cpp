@@ -108,5 +108,6 @@ void frmBenutzerEinstellungen::baueUI()
     ui->edtBenutzertyp->setEnabled(false);
     ui->edtBenutzername->setText(aktNutzer->getNutzername());
     ui->edtPasswort->setText(aktNutzer->getPasswort());
+    ui->edtPasswort->setEchoMode(QLineEdit::Password);
 }
 

@@ -9,6 +9,7 @@ frmAnmelden::frmAnmelden(QWidget *parent) :
     ui(new Ui::frmAnmelden)
 {
     ui->setupUi(this);
+    ui->ldtPasswort->setEchoMode(QLineEdit::Password);
 }
 
 frmAnmelden::~frmAnmelden()

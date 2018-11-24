@@ -31,19 +31,17 @@ bool BenutzerKontrolle::updateBenutzer(Benutzer *_benutzer)
  * Erstellen eines Benutzerobjektes und Hinzufügen in die Datenbank
  * Autor: Lars
  */
-bool BenutzerKontrolle::addBenutzer(QString _vorname, QString _nachname, OrgEinheit *_oe, QString _nutzername, QString _passwort, bool admin)
+bool BenutzerKontrolle::addBenutzer(QString _vorname, QString _nachname, OrgEinheit *_oe, QString _nutzername, QString _passwort, bool _admin, bool _deaktiviert)
 {
     Benutzer* neu = new Benutzer();
     bool erfolg;
-    if (admin)
-    {
-        neu->setAdmin(true);
-    }
     neu->setVorname(_vorname);
     neu->setNachname(_nachname);
     neu->setNutzername(_nutzername);
     neu->setPasswort(_passwort);
     neu->setJahrgang(_oe);
+    neu->setAdmin(_admin);
+    neu->setDeaktiviert(_deaktiviert);
     erfolg = this->dbConnector->dbInsertBenutzer(neu);
     return erfolg;
 }

@@ -14,7 +14,7 @@ public:
     BenutzerKontrolle();
     ~BenutzerKontrolle();
     bool updateBenutzer(Benutzer* _benutzer);
-    bool addBenutzer(QString _vorname, QString _nachname, OrgEinheit* _oe, QString _nutzername, QString _passwort, bool admin = false);
+    bool addBenutzer(QString _vorname, QString _nachname, OrgEinheit* _oe, QString _nutzername, QString _passwort, bool _admin = false, bool _deaktiviert = false);
     QVector<Benutzer*> holeBenutzer(OrgEinheit* _oe);
     QVector<Benutzer*> holeAdmin();
     QVector<OrgEinheit*> holeOE();

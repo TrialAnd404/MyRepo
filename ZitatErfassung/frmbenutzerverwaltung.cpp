@@ -146,6 +146,13 @@ void frmBenutzerVerwaltung::baueUI()
     for (int i = 0; i < this->suchListe.length(); i++)
     {
         Benutzer* nutzer = this->suchListe[i];
-        ui->lwAnzeigen->addItem(nutzer->getNutzername() + ": " + nutzer->getVorname() + nutzer->getNachname());
+        ui->lwAnzeigen->addItem(nutzer->getNutzername() + ": " + nutzer->getVorname() + " " + nutzer->getNachname());
     }
+}
+
+void frmBenutzerVerwaltung::on_btnImport_clicked()
+{
+    FrmBenutzerImport nutzerImport;
+    nutzerImport.setModal(true);
+    nutzerImport.exec();
 }

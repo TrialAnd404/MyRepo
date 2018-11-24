@@ -90,3 +90,10 @@ void frmHauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
     benutzerverwaltung.exec();
     //MPS
 }
+
+void frmHauptmenueAdmin::on_btnMeldungenVerwalten_clicked()
+{
+    FrmMeldungAnzeigen meldungsVerwaltung;
+    meldungsVerwaltung.setModal(true);
+    meldungsVerwaltung.exec();
+}

@@ -4,6 +4,7 @@
 #include <QDialog>
 
 #include "admin.h"
+#include "frmmeldunganzeigen.h"
 
 namespace Ui {
 class frmHauptmenueAdmin;
@@ -34,6 +35,8 @@ private slots:
     void on_pbJahrgaengeVerwalten_clicked();
 
     void on_pbBenutzerVerwaltung_clicked();
+
+    void on_btnMeldungenVerwalten_clicked();
 
 private:
     Ui::frmHauptmenueAdmin *ui;

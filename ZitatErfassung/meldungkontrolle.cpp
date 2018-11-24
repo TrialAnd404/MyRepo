@@ -31,3 +31,8 @@ bool MeldungKontrolle::sendeMeldung(Zitat* _zitat, QString _grund)
     return this->dbConnector->dbInsertMeldung(meld);
 
 }
+
+QVector<Meldung *> MeldungKontrolle::holeMeldung()
+{
+    return this->dbConnector->dbSelectMeldung();
+}

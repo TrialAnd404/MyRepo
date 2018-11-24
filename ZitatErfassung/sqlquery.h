@@ -33,11 +33,11 @@ public:
 
     static SQLQuery* getDBConnector();
 
-    QVector<Admin*> dbSelectAdmin(QString _content = "alle", QString _value = "alle");
-    QVector<Benutzer*> dbSelectBenutzer(QString _content = "alle", QString _value = "alle");
-    QVector<Zitat*> dbSelectZitat(QString _content = "alle", QString _value = "alle");
-    QVector<Meldung*> dbSelectMeldung(QString _content = "alle", QString _value = "alle");
-    QVector<OrgEinheit*> dbSelectOrgEinheit(QString _content = "alle", QString _value = "alle");
+    QVector<Admin*> dbSelectAdmin(QString _content = "alle", QString _value = "alle", bool _subselect = false);
+    QVector<Benutzer*> dbSelectBenutzer(QString _content = "alle", QString _value = "alle", bool _subselect = false);
+    QVector<Zitat*> dbSelectZitat(QString _content = "alle", QString _value = "alle", bool _subselect = false);
+    QVector<Meldung*> dbSelectMeldung(QString _content = "alle", QString _value = "alle", bool _subselect = false);
+    QVector<OrgEinheit*> dbSelectOrgEinheit(QString _content = "alle", QString _value = "alle", bool _subselect = false);
 
     bool dbCheckExisting(QString _stringInQuestion, QString _tblInQuestion, QString _tblContentInQuestion, bool _exactMatch);
     bool checkAlreadyVoted(int _benutzerID, int _zitatID);

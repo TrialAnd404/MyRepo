@@ -38,7 +38,9 @@ SOURCES += main.cpp\
     meldungkontrolle.cpp \
     frmzitataendern.cpp \
     frmjahrgangaendern.cpp \
-    frmbenutzeraendern.cpp
+    frmbenutzeraendern.cpp \
+    frmmeldunganzeigen.cpp \
+    frmbenutzerimport.cpp
 
 HEADERS  += frmmain.h \
     benutzer.h \
@@ -65,7 +67,9 @@ HEADERS  += frmmain.h \
     meldungkontrolle.h \
     frmzitataendern.h \
     frmjahrgangaendern.h \
-    frmbenutzeraendern.h
+    frmbenutzeraendern.h \
+    frmmeldunganzeigen.h \
+    frmbenutzerimport.h
 
 
 FORMS    += frmmain.ui \
@@ -81,4 +85,6 @@ FORMS    += frmmain.ui \
     frmmeldezitat.ui \
     frmzitataendern.ui \
     frmjahrgangaendern.ui \
-    frmbenutzeraendern.ui
+    frmbenutzeraendern.ui \
+    frmmeldunganzeigen.ui \
+    frmbenutzerimport.ui

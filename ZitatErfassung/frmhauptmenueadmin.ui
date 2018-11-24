@@ -156,6 +156,19 @@
     <string>Benutzerverwaltung</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btnMeldungenVerwalten">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>220</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Meldungen verwalten</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

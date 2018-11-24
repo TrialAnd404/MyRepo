@@ -66,8 +66,8 @@ void frmZitatAendern::on_btnZurueck_clicked()
  */
 void frmZitatAendern::baueUI()
 {
-    //ui->edtEingetragenVon->setText(this->zit->getEingetragenVon()->getNutzername());
-    //ui->edtOrgEinheit->setText(zit->getOrgEinheit()->getBezeichnung() + ", " + zit->getOrgEinheit()->getJahr());
+    ui->edtEingetragenVon->setText(this->zit->getEingetragenVon()->getNutzername());
+    ui->edtOrgEinheit->setText(zit->getOrgEinheit()->getBezeichnung() + ", " + zit->getOrgEinheit()->getJahr());
     ui->deDatum->setDate(zit->getDatum());
     ui->edtRedner->setText(zit->getRedner());
     ui->edtZitat->setText(zit->getInhalt());

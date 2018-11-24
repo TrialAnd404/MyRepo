@@ -74,7 +74,7 @@ SQLQuery *SQLQuery::getDBConnector()
 
 /*
  * Datenbankabfrage auf bereits bestehenden Eintrag
- * Autor: Lars
+ * Autor: Tim
  */
 bool SQLQuery::dbCheckExisting(QString _stringInQuestion, QString _tblInQuestion, QString _tblContentInQuestion, bool _exactMatch)
 {
@@ -168,14 +168,19 @@ bool SQLQuery::dbInsertBenutzer(Benutzer* _benutzer)
     else
     {
         int admin = 0;
+        int deaktiviert = 0;
         if (_benutzer->getAdmin())
         {
             admin = 1;
         }
+        if (_benutzer->getDeaktiviert())
+        {
+            deaktiviert = 1;
+        }
         insertCheck= db.open();
         QSqlQuery qry;
         QString sqlQuery;
-        sqlQuery = "INSERT INTO tblBenutzerStandard VALUES (" + QString::number(id) + ", '"+ _benutzer->getNutzername() +"', '"+_benutzer->getPasswort()+"', '"+_benutzer->getVorname()+"', '"+_benutzer->getNachname()+"', "+QString::number(_benutzer->getJahrgang()->getID()) + ", " + QString::number(admin) + ");";
+        sqlQuery = "INSERT INTO tblBenutzerStandard VALUES (" + QString::number(id) + ", '"+ _benutzer->getNutzername() +"', '"+_benutzer->getPasswort()+"', '"+_benutzer->getVorname()+"', '"+_benutzer->getNachname()+"', "+QString::number(_benutzer->getJahrgang()->getID()) + ", " + QString::number(admin) + ", " + QString::number(deaktiviert) + ");";
 
         insertCheck = qry.exec(sqlQuery);
         if (insertCheck)
@@ -342,9 +347,10 @@ QVector<Admin *> SQLQuery::dbSelectAdmin(QString _content, QString _value)
  * Datenbankabfrage auf Benutzer
  * Autor: Lars
  */
-QVector<Benutzer *> SQLQuery::dbSelectBenutzer(QString _content, QString _value)
+QVector<Benutzer *> SQLQuery::dbSelectBenutzer(QString _content, QString _value, bool _subselect)
 {
     QVector<Benutzer*> selectResult;
+    QVector<int> orgID;
     bool selectCheck = db.open();
     QSqlQuery qry;
     QString sqlQuery;
@@ -365,13 +371,21 @@ QVector<Benutzer *> SQLQuery::dbSelectBenutzer(QString _content, QString _value)
         benutzer->setPasswort(qry.value(2).toString());
         benutzer->setVorname(qry.value(3).toString());
         benutzer->setNachname(qry.value(4).toString());
-        benutzer->setJahrgang(this->dbSelectOrgEinheit("ID",qry.value(5).toString())[0]);
+        orgID.append(qry.value(5).toInt());
         benutzer->setAdmin(qry.value(6).toInt() == 1);
+        benutzer->setDeaktiviert(qry.value(7).toInt() == 1);
 
         selectResult.append(benutzer);
         selectCheck = qry.next();
     }
-    db.close();
+    if (!_subselect)
+    {
+        db.close();
+    }
+    for (int i = 0; i < selectResult.length(); i++)
+    {
+        selectResult[i]->setJahrgang(this->dbSelectOrgEinheit("ID",QString::number(orgID[i]),true)[0]);
+    }
     return selectResult;
 }
 
@@ -379,9 +393,11 @@ QVector<Benutzer *> SQLQuery::dbSelectBenutzer(QString _content, QString _value)
  * Datenbankabfrage auf Zitate
  * Autor: Lars
  */
-QVector<Zitat *> SQLQuery::dbSelectZitat(QString _content, QString _value)
+QVector<Zitat *> SQLQuery::dbSelectZitat(QString _content, QString _value, bool _subselect)
 {
     QVector<Zitat*> selectResult;
+    QVector<int> orgID;
+    QVector<int> nutzerID;
     bool selectCheck = db.open();
     QSqlQuery qry;
     QString sqlQuery;
@@ -400,14 +416,25 @@ QVector<Zitat *> SQLQuery::dbSelectZitat(QString _content, QString _value)
         zitat->setID(qry.value(0).toInt());
         zitat->setRedner(qry.value(1).toString());
         zitat->setInhalt(qry.value(2).toString());
-        //zitat->setOrgEinheit(this->dbSelectOrgEinheit("ID" , qry.value(3).toString())[0]);
+        orgID.append(qry.value(3).toInt());
         zitat->setDatum(qry.value(4).toDate());
-        //zitat->setEingetragenVon(qry.value(5));       Abfrage nach Admin und Benutzer!!!
+        nutzerID.append(qry.value(5).toInt());
 
         selectResult.append(zitat);
         selectCheck = qry.next(); // Fehler weil zwischendurch neue Abfrage und db.close() oder weil kein QString::number() ich Idiot???
     }
-    db.close();
+    if (!_subselect)
+    {
+        db.close();
+    }
+    for (int i = 0; i < selectResult.length(); i++)
+    {
+        selectResult[i]->setOrgEinheit(this->dbSelectOrgEinheit("ID",QString::number(orgID[i]))[0]);
+    }
+    for (int i = 0; i < selectResult.length(); i++)
+    {
+        selectResult[i]->setEingetragenVon(this->dbSelectBenutzer("ID",QString::number(nutzerID[i]))[0]);
+    }
     return selectResult;
 }
 
@@ -415,9 +442,11 @@ QVector<Zitat *> SQLQuery::dbSelectZitat(QString _content, QString _value)
  * Datenbankabfrage auf Meldungen
  * Autor: Lars
  */
-QVector<Meldung *> SQLQuery::dbSelectMeldung(QString _content, QString _value)
+QVector<Meldung *> SQLQuery::dbSelectMeldung(QString _content, QString _value, bool _subselect)
 {
     QVector<Meldung*> selectResult;
+    QVector<int> zitID;
+    QVector<int> nutzerID;
     bool selectCheck = db.open();
     QSqlQuery qry;
     QString sqlQuery;
@@ -434,14 +463,25 @@ QVector<Meldung *> SQLQuery::dbSelectMeldung(QString _content, QString _value)
     {
         Meldung* meldung = new Meldung();
         meldung->setID(qry.value(0).toInt());
-        //meldung->setZitat(qry.value(1).toInt());
+        zitID.append(qry.value(1).toInt());
         meldung->setGrund(qry.value(2).toString());
-        //meldung->setSender(qry.value(3).toInt());
+        nutzerID.append(qry.value(3).toInt());
 
         selectResult.append(meldung);
         selectCheck = qry.next();
     }
-    db.close();
+    if (!_subselect)
+    {
+        db.close();
+    }
+    for (int i = 0; i < selectResult.length(); i++)
+    {
+        selectResult[i]->setZitat(this->dbSelectZitat("ID",QString::number(zitID[i]))[0]);
+    }
+    for (int i = 0; i < selectResult.length(); i++)
+    {
+        selectResult[i]->setSender(this->dbSelectBenutzer("ID",QString::number(nutzerID[i]))[0]);
+    }
     return selectResult;
 }
 
@@ -449,7 +489,7 @@ QVector<Meldung *> SQLQuery::dbSelectMeldung(QString _content, QString _value)
  * Datenbankabfrage auf OrgEinheiten
  * Autor: Lars
  */
-QVector<OrgEinheit *> SQLQuery::dbSelectOrgEinheit(QString _content, QString _value)
+QVector<OrgEinheit *> SQLQuery::dbSelectOrgEinheit(QString _content, QString _value, bool _subselect)
 {
     QVector<OrgEinheit*> selectResult;
     bool selectCheck = db.open();
@@ -474,7 +514,10 @@ QVector<OrgEinheit *> SQLQuery::dbSelectOrgEinheit(QString _content, QString _va
         selectResult.append(orgeinheit);
         selectCheck = qry.next();
     }
-    db.close();
+    if (!_subselect)
+    {
+        db.close();
+    }
     return selectResult;
 }
 
