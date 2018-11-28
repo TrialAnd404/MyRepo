@@ -2,9 +2,12 @@
 #define ORGEINHEIT_H
 
 #include <QString>
+#include "QObject"
 
-//#include "zitat.h"
-
+/*
+ * Modelklasse OrgEinheit
+ * Autor: Lars
+ */
 class OrgEinheit
 {
 private:
@@ -13,7 +16,9 @@ private:
     QString jahr;
     //QVector<Zitat*> zitate;
 public:
+    OrgEinheit();
     OrgEinheit(int p_id, QString p_bezeichnung, QString p_jahr);
+    ~OrgEinheit();
     int getID();
     void setID(int p_id);
     QString getBezeichnung();

@@ -1,5 +1,18 @@
 #include "orgeinheit.h"
 
+/*
+ * Standardkonstruktor
+ * Autor: Lars
+ */
+OrgEinheit::OrgEinheit()
+{
+
+}
+
+/*
+ * Konstruktor
+ * Autor: Lars
+ */
 OrgEinheit::OrgEinheit(int p_id, QString p_bezeichnung, QString p_jahr)
 {
     this->id = p_id;
@@ -7,6 +20,19 @@ OrgEinheit::OrgEinheit(int p_id, QString p_bezeichnung, QString p_jahr)
     this->jahr = p_jahr;
 }
 
+/*
+ * Destruktor
+ * Autor: Lars
+ */
+OrgEinheit::~OrgEinheit()
+{
+
+}
+
+/*
+ * Setter und Getter
+ * Autor: Lars
+ */
 int OrgEinheit::getID()
 {
     return this->id;

@@ -1,0 +1,15 @@
+Benutzereinstellungen:
+
+-Lässt mich den Nachnamen 'Schmotz' nicht eingeben.
+-Wenn einen benutzer eintragen will und er mir eine fehlermeldung gibt
+das Daten nicht korrekt sind und ich etwas änder und dann auf speichern 
+drücke obwohl etwas immernoch falsch eingetragen ist gibt er keine 
+fehlermeldung udn speichert es nicht ab.
+-In Zitat anzeigen wenn man ein zitat ändert und man auf speichern
+klickt sollte die Tabelle nochmal geloopt weren und die änderungen
+sollten abgespeichert werden.
+-Melden Knopf in 'Zitat anzeigen' hat noch keine Funktion.
+-Export Knopf in 'Zitat anzeigen' hat noch keine Funktion.
+-In Zitat anzeigen wird darauf geachtet ob es groß oder klein
+geschrieben ist. Suche zB. nach 'Hab' und dann nach 'hab'.
+-

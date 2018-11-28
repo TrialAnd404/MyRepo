@@ -1,5 +1,18 @@
 #include "meldung.h"
 
+/*
+ * Standardkonstruktor
+ * Autor: Lars
+ */
+Meldung::Meldung()
+{
+
+}
+
+/*
+ * Konstruktor
+ * Autor: Lars
+ */
 Meldung::Meldung(int p_id, Zitat* p_zitat, QString p_grund, Benutzer* p_sender)
 {
     this->id = p_id;
@@ -8,6 +21,19 @@ Meldung::Meldung(int p_id, Zitat* p_zitat, QString p_grund, Benutzer* p_sender)
     this->sender = p_sender;
 }
 
+/*
+ * Destruktor
+ * Autor: Lars
+ */
+Meldung::~Meldung()
+{
+
+}
+
+/*
+ * Setter und Getter
+ * Autor: Lars
+ */
 int Meldung::getID()
 {
     return this->id;

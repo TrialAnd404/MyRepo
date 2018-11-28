@@ -1,5 +1,18 @@
 #include "benutzer.h"
 
+/*
+ * Standardkonstruktor Benutzer
+ * Autor: Lars
+ */
+Benutzer::Benutzer()
+{
+
+}
+
+/*
+ * Konstruktor Benutzer
+ * Autor: Lars
+ */
 Benutzer::Benutzer(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, OrgEinheit* p_jahrgang)
 {
     this->nutzername = p_nutzername;
@@ -9,6 +22,19 @@ Benutzer::Benutzer(QString p_nutzername, QString p_passwort, QString p_vorname, 
     this->jahrgang = p_jahrgang;
 }
 
+/*
+ * Destruktor BenutzerKontrolle
+ * Autor: Lars
+ */
+Benutzer::~Benutzer()
+{
+
+}
+
+/*
+ * Setter und Getter Benutzer
+ * Autor: Lars
+ */
 int Benutzer::getID()
 {
     return this->id;
@@ -31,7 +57,7 @@ void Benutzer::setNutzername(QString p_nutzername)
 
 QString Benutzer::getPasswort()
 {
-    return this->getPasswort();
+    return this->passwort;
 }
 
 void Benutzer::setPasswort(QString p_passwort)
@@ -69,35 +95,22 @@ void Benutzer::setJahrgang(OrgEinheit* p_jahrgang)
     this->jahrgang = p_jahrgang;
 }
 
-/*
-QVector<Zitat*> Benutzer::getEingetrageneZitate()
+bool Benutzer::getAdmin()
 {
-    return this->eingetrageneZitate;
+    return this->admin;
 }
 
-void Benutzer::setEingetrageneZitate(QVector<Zitat*> p_eingetrageneZitate)
+void Benutzer::setAdmin(bool p_admin)
 {
-    this->eingetrageneZitate = p_eingetrageneZitate;
+    this->admin = p_admin;
 }
 
-QVector<Zitat*> Benutzer::getUpvote()
+bool Benutzer::getDeaktiviert()
 {
-    return this->upvote;
+    return this->deaktiviert;
 }
 
-void Benutzer::setUpvote(QVector<Zitat*> p_upvote)
+void Benutzer::setDeaktiviert(bool p_deaktiviert)
 {
-    this->upvote = p_upvote;
+    this->deaktiviert = p_deaktiviert;
 }
-
-QVector<Zitat*> Benutzer::getDownvote()
-{
-    return this->downvote;
-}
-
-void Benutzer::setDownvote(QVector<Zitat*> p_downvote)
-{
-    this->downvote = p_downvote;
-}
-
-*/

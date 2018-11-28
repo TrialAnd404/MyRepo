@@ -16,7 +16,6 @@ public:
     ~frmMain();
 
 private slots:
-    void on_pbLogin_clicked();
 
     void on_pbStarten_clicked();
 

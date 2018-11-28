@@ -14,16 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         frmmain.cpp \
-    hauptmenueuser.cpp \
-    hauptmenueadmin.cpp \
-    benutzereinstellungen.cpp \
     benutzer.cpp \
     zitat.cpp \
     orgeinheit.cpp \
     meldung.cpp \
-    admin.cpp \
     frmbenutzerverwaltung.cpp \
-    zitateintragen.cpp \
     frmanmelden.cpp \
     frmzitatanzeigen.cpp \
     frmzitatverwalten.cpp \
@@ -32,19 +27,27 @@ SOURCES += main.cpp\
     checkvalidentry.cpp \
     zitatkontrolle.cpp \
     sessioninfo.cpp \
-    sqlquery.cpp
+    sqlquery.cpp \
+    orgeinheitkontrolle.cpp \
+    frmhauptmenueadmin.cpp \
+    frmhauptmenueuser.cpp \
+    frmzitateintragen.cpp \
+    frmbenutzereinstellungen.cpp \
+    benutzerkontrolle.cpp \
+    frmmeldezitat.cpp \
+    meldungkontrolle.cpp \
+    frmzitataendern.cpp \
+    frmjahrgangaendern.cpp \
+    frmbenutzeraendern.cpp \
+    frmmeldunganzeigen.cpp \
+    frmbenutzerimport.cpp
 
 HEADERS  += frmmain.h \
-    hauptmenueuser.h \
-    hauptmenueadmin.h \
-    benutzereinstellungen.h \
     benutzer.h \
     zitat.h \
     orgeinheit.h \
     meldung.h \
-    admin.h \
     frmbenutzerverwaltung.h \
-    zitateintragen.h \
     frmanmelden.h \
     frmzitatanzeigen.h \
     frmzitatverwalten.h \
@@ -52,16 +55,36 @@ HEADERS  += frmmain.h \
     userlogin.h \
     checkvalidentry.h \
     zitatkontrolle.h \
-    sessioninfo.h
+    sessioninfo.h \
+    sqlquery.h \
+    orgeinheitkontrolle.h \
+    frmhauptmenueadmin.h \
+    frmhauptmenueuser.h \
+    frmzitateintragen.h \
+    frmbenutzereinstellungen.h \
+    benutzerkontrolle.h \
+    frmmeldezitat.h \
+    meldungkontrolle.h \
+    frmzitataendern.h \
+    frmjahrgangaendern.h \
+    frmbenutzeraendern.h \
+    frmmeldunganzeigen.h \
+    frmbenutzerimport.h
 
 
 FORMS    += frmmain.ui \
-    hauptmenueuser.ui \
-    hauptmenueadmin.ui \
-    benutzereinstellungen.ui \
-    zitateintragen.ui \
     frmanmelden.ui \
     frmzitatanzeigen.ui \
     frmzitatverwalten.ui \
     frmjahrgaengeverwalten.ui \
-    frmbenutzerverwaltung.ui
+    frmbenutzerverwaltung.ui \
+    frmhauptmenueadmin.ui \
+    frmhauptmenueuser.ui \
+    frmzitateintragen.ui \
+    frmbenutzereinstellungen.ui \
+    frmmeldezitat.ui \
+    frmzitataendern.ui \
+    frmjahrgangaendern.ui \
+    frmbenutzeraendern.ui \
+    frmmeldunganzeigen.ui \
+    frmbenutzerimport.ui

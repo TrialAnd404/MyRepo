@@ -1,0 +1,4 @@
+Pflicht:
+	Zitatexport
+Kann:
+	Voting

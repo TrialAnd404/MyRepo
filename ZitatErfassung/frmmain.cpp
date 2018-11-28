@@ -1,8 +1,8 @@
 #include "frmmain.h"
 #include "ui_frmmain.h"
-#include <hauptmenueuser.h>
-#include <hauptmenueadmin.h>
-#include <benutzereinstellungen.h>
+#include <frmhauptmenueuser.h>
+#include <frmhauptmenueadmin.h>
+#include <frmbenutzereinstellungen.h>
 #include <QMessageBox>
 #include <frmanmelden.h>
 
@@ -28,9 +28,3 @@ void frmMain::on_pbStarten_clicked()
     //MPS
 }
 
-void frmMain::on_pbLogin_clicked()
-{
-    frmAnmelden frmanmelden;
-    frmanmelden.setModal(true);
-    frmanmelden.exec();
-}
