@@ -16,7 +16,6 @@ frmHauptmenueUser::frmHauptmenueUser(QWidget *parent) :
     ui(new Ui::frmHauptmenueUser)
 {
     ui->setupUi(this);
-    //TODO: User Objekt aus Parametern erstellen?
 }
 
 /*
@@ -54,10 +53,8 @@ void frmHauptmenueUser::on_pbZitatEintragen_clicked()
  */
 void frmHauptmenueUser::on_pbAbmelden_clicked()
 {
+    SessionInfo::getSessionInfo()->setAktNutzer(NULL);
     this->close();
-    frmAnmelden frmanmelden;
-    frmanmelden.setModal(true);
-    frmanmelden.exec();
 }
 
 /*

@@ -38,7 +38,6 @@ void frmAnmelden::on_pbLogin_clicked()
 
     if (login->checkLoginCredentials(user, passwrd))
     {
-        this->close();
         if (SessionInfo::getSessionInfo()->getAktNutzer()->getAdmin())
         {
             frmHauptmenueAdmin hauptmenueAdmin(this);
@@ -51,6 +50,7 @@ void frmAnmelden::on_pbLogin_clicked()
             hauptmenueBenutzer.setModal(true);
             hauptmenueBenutzer.exec();
         }
+        ui->ldtPasswort->clear();
     }
     else
     {

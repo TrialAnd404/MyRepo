@@ -66,10 +66,9 @@ void frmHauptmenueAdmin::on_pbZitatEintragen_clicked()
  */
 void frmHauptmenueAdmin::on_pbAbmelden_clicked()
 {
+    SessionInfo::getSessionInfo()->setAktNutzer(NULL);
     this->close();
-    frmAnmelden frmanmelden;
-    frmanmelden.setModal(true);
-    frmanmelden.exec();
+
 }
 
 /*
