@@ -2,6 +2,7 @@
 #define FRMZITATANZEIGEN_H
 
 #include <QDialog>
+#include <QMessageBox>
 #include "zitatkontrolle.h"
 #include "frmmeldezitat.h"
 

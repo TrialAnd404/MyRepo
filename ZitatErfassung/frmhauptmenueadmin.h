@@ -6,6 +6,10 @@
 #include "admin.h"
 #include "frmmeldunganzeigen.h"
 
+/*
+ * Oberfläche des Hauptmenus für Admins
+ * Autor: Pascal
+ */
 namespace Ui {
 class frmHauptmenueAdmin;
 }
@@ -15,7 +19,7 @@ class frmHauptmenueAdmin : public QDialog
     Q_OBJECT
 
 public:
-    explicit frmHauptmenueAdmin(Admin* currentAdmin, QWidget *parent = 0);
+    explicit frmHauptmenueAdmin(QWidget *parent = 0);
     ~frmHauptmenueAdmin();
     Admin* getCurrentAdmin();
 

@@ -52,7 +52,7 @@
   <widget class="QPushButton" name="btnBearbeiten">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>120</x>
      <y>280</y>
      <width>93</width>
      <height>28</height>
@@ -60,6 +60,19 @@
    </property>
    <property name="text">
     <string>Bearbeiten</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnLoeschen">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>290</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Löschen</string>
    </property>
   </widget>
  </widget>

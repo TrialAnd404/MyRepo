@@ -24,7 +24,7 @@ BenutzerKontrolle::~BenutzerKontrolle()
  */
 bool BenutzerKontrolle::updateBenutzer(Benutzer *_benutzer)
 {
-    this->dbConnector->dbUpdateBenutzer(_benutzer, _benutzer->getID());
+    return this->dbConnector->dbUpdateBenutzer(_benutzer, _benutzer->getID());
 }
 
 /*

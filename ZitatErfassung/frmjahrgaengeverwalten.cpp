@@ -87,12 +87,12 @@ void frmJahrgaengeVerwalten::on_pbSuchen_clicked()
         this->suchListe.clear();
         for (int i = 0; i < this->oeListe.length(); i++)
         {
-            if (oeListe[i]->getBezeichnung().contains(suchwort))
+            if (oeListe[i]->getBezeichnung().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(oeListe[i]);
                 continue;
             }
-            if (oeListe[i]->getJahr().contains(suchwort))
+            if (oeListe[i]->getJahr().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(oeListe[i]);
                 continue;

@@ -9,88 +9,117 @@
 #include <frmjahrgaengeverwalten.h>
 #include <frmbenutzerverwaltung.h>
 
-frmHauptmenueAdmin::frmHauptmenueAdmin(Admin* currentAdmin, QWidget *parent) :
+/*
+ * Konstruktor
+ * Autor: Pascal
+ */
+frmHauptmenueAdmin::frmHauptmenueAdmin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::frmHauptmenueAdmin)
 {
     ui->setupUi(this);
 }
 
+/*
+ * Destruktor
+ * Autor: Pascal
+ */
 frmHauptmenueAdmin::~frmHauptmenueAdmin()
 {
     delete ui;
 }
 
+/*
+ * Öffnen eines Fensters für Benutzereinstellungen
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbBenutzerEinstellungen_clicked()
 {
-    //so öffnet man ein neues Window "Benutzereinstellungen"
     frmBenutzerEinstellungen benutzereinstellungen;
     benutzereinstellungen.setModal(true);
     benutzereinstellungen.exec();
-    //MPS
 }
 
+/*
+ * Beenden der Anwendung
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbBeenden_clicked()
 {
     qApp->quit();
 }
 
+/*
+ * Öffnen eines Fensters zum Eintragen eines Zitatess
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbZitatEintragen_clicked()
 {
-    //so öffnet man ein neues Window "Benutzereinstellungen"
     frmZitatEintragen zitateintragen;
     zitateintragen.setModal(true);
     zitateintragen.exec();
-    //MPS
 }
 
-
+/*
+ * Abmelden und öffnen eines Neuen Anmeldefensters
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbAbmelden_clicked()
 {
     this->close();
-    //so öffnet man ein neues Window "frmmain" (Anmeldemaske)
     frmAnmelden frmanmelden;
     frmanmelden.setModal(true);
     frmanmelden.exec();
-    //MPS
 }
 
+/*
+ * Öffnen eines Fensters zum Anzeigen der Zitate
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbZitatAnzeigen_clicked()
 {
-    //so öffnet man ein neues Window "zitatanzeigen"
     frmZitatAnzeigen zitatanzeigen;
     zitatanzeigen.setModal(true);
     zitatanzeigen.exec();
-    //MPS
 }
 
+/*
+ * Öffnen eines Fensters zum Verwalten der Zitate
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbZitatVerwalten_clicked()
 {
-    //so öffnet man ein neues Window "zitatverwalten"
     frmZitatVerwalten zitatverwalten;
     zitatverwalten.setModal(true);
     zitatverwalten.exec();
-    //MPS
 }
 
+/*
+ * Öffnen eines Fensters zum Verwalten der Jahrgänge/ OrgEinheiten
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbJahrgaengeVerwalten_clicked()
 {
-    //so öffnet man ein neues Window "jahrgaengeverwalten"
     frmJahrgaengeVerwalten jahrgaengeverwalten;
     jahrgaengeverwalten.setModal(true);
     jahrgaengeverwalten.exec();
-    //MPS
 }
 
+/*
+ * Öffnen eines Fensters zum Verwalten der Benutzer
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_pbBenutzerVerwaltung_clicked()
 {
-    //so öffnet man ein neues Window "jahrgaengeverwalten"
     frmBenutzerVerwaltung benutzerverwaltung;
     benutzerverwaltung.setModal(true);
     benutzerverwaltung.exec();
-    //MPS
 }
 
+/*
+ * Öffnen eines Fenstes zum Verwalten der Meldungen
+ * Autor: Pascal
+ */
 void frmHauptmenueAdmin::on_btnMeldungenVerwalten_clicked()
 {
     FrmMeldungAnzeigen meldungsVerwaltung;

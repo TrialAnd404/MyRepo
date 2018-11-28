@@ -46,32 +46,6 @@ SQLQuery *SQLQuery::getDBConnector()
     return SQLQuery::singleton;
 }
 
-/*QString SQLQuery::datenbankOperation(QString p_Query)
-{
-    QString ausgabe;
-
-    bool ok;
-
-    ok = db.open();
-
-    QString sqlBefehl = "select Nutzername from tblBenutzerAdmin";
-    QSqlQuery qry;
-    ok = qry.exec(sqlBefehl);
-    qDebug() << qry.lastError().text();
-
-    ok = qry.first();
-    while (ok)
-    {
-        ausgabe += qry.value(0).toString() + " ";
-        ok = qry.next();
-    }
-    db.close();
-
-    return QString(ausgabe);
-
-}
-*/
-
 /*
  * Datenbankabfrage auf bereits bestehenden Eintrag
  * Autor: Tim
@@ -104,53 +78,6 @@ bool SQLQuery::dbCheckExisting(QString _stringInQuestion, QString _tblInQuestion
     return entryCheck;
 
 }
-
-/*
-bool SQLQuery::dbInsertAdmin(Admin* _admin)
-{
-    bool insertCheck;
-    int id = getLastID();
-
-    int super = 0;
-    if (_admin->getSuper())
-    {
-        super = 1;
-    }
-
-    if(dbCheckExisting(_admin->getNutzername(), "tblBenutzerAdmin", "Nutzername", true))
-    {
-        insertCheck = false;
-    }
-    else
-    {
-        insertCheck = db.open();
-        QSqlQuery qry;
-        QString sqlQuery;
-        sqlQuery = "INSERT INTO tblBenutzerAdmin VALUES (" + QString::number(id) + ", '"+ _admin->getNutzername() +"', '"+_admin->getPasswort()+"', '"+_admin->getVorname()+"', '"+_admin->getNachname()+"', "+ QString::number(super) +", "+QString::number(_admin->getJahrgang()->getID()) + ");";
-
-        insertCheck = qry.exec(sqlQuery);
-        if (insertCheck)
-            qry.exec("UPDATE tblIdGenerator SET ID = "+QString::number(++id));
-        db.close();
-    }
-    return insertCheck;
-}
-*/
-
-/*
-bool SQLQuery::dbInsertAdminMeldung(int _adminId, int _meldungID)
-{
-
-    QString sqlQuery;
-    bool insertCheck = db.open();
-    QSqlQuery qry;
-    sqlQuery = "INSERT INTO tblAdminMeldung(AdminID, MeldungID) VALUES("+QString::number(_adminId)+", "+QString::number(_meldungID)+")";
-    insertCheck = qry.exec(sqlQuery);
-
-    db.close();
-    return insertCheck;
-}
-*/
 
 /*
  * Eintragen eines Benutzerobjekts in die Datenbank
@@ -238,34 +165,6 @@ bool SQLQuery::dbInsertOrg(OrgEinheit* _orgEinheit)
     return insertCheck;
 }
 
-bool SQLQuery::dbInsertVote(bool _upvote, int _benutzerID, int _zitatID)
-{
-
-    QString sqlQuery;
-    bool alreadyVoted;
-    bool insertCheck = db.open();
-    QSqlQuery qry;
-
-    alreadyVoted = checkAlreadyVoted(_benutzerID, _zitatID);
-    if(!alreadyVoted)
-    {
-        if (_upvote)
-        {
-            sqlQuery= "SELECT * FROM tblUpvotes,tblDown";
-            db.close();
-        }
-        else
-        {
-            sqlQuery= "";
-            db.close();
-        }
-    }
-    else{
-        insertCheck = false;
-    }
-    return insertCheck;
-}
-
 /*
  * Eintragen eines Zitats in die Datenbank
  * Autor: Lars
@@ -306,42 +205,6 @@ bool SQLQuery::dbDelete(QString _table, int _id)
     db.close();
     return deleteCheck;
 }
-
-/*
-QVector<Admin *> SQLQuery::dbSelectAdmin(QString _content, QString _value)
-{
-    QVector<Admin*> selectResult;
-    bool selectCheck = db.open();
-    QSqlQuery qry;
-    qry.clear();
-    QString sqlQuery;
-
-    sqlQuery = "SELECT * FROM tblBenutzerAdmin WHERE "+_content+" LIKE '"+_value + "';";
-    if (_content == "alle")
-    {
-        sqlQuery = "SELECT * FROM tblBenutzerAdmin";
-    }
-    selectCheck = qry.exec(sqlQuery);
-    selectCheck = qry.first();
-
-    while(selectCheck)
-    {
-        Admin* admin = new Admin();
-        admin->setID(qry.value(0).toInt());
-        admin->setNutzername(qry.value(1).toString());
-        admin->setPasswort(qry.value(2).toString());
-        admin->setVorname(qry.value(3).toString());
-        admin->setNachname(qry.value(4).toString());
-        admin->setSuper(qry.value(5).toInt() == 1);
-        admin->setJahrgang(this->dbSelectOrgEinheit("ID",qry.value(6).toString())[0]);
-
-        selectResult.append(admin);
-        selectCheck = qry.next();
-    }
-    db.close();
-    return selectResult;
-}
-*/
 
 /*
  * Datenbankabfrage auf Benutzer
@@ -547,24 +410,6 @@ int SQLQuery::getLastID()
 }
 
 /*
-bool SQLQuery::dbUpdateAdmin(Admin *_admin, int _id)
-{
-    int superAlternativ = 0;
-    if (_admin->getSuper())
-    {
-        superAlternativ = 1;
-    }
-    QString sqlQuery = "UPDATE tblBenutzerAdmin SET Nutzername = '" + _admin->getNutzername() + "', Passwort = '" + _admin->getPasswort() + "', Vorname = '" + _admin->getVorname() + "', Nachname = '" + _admin->getNachname() + "', Super = " + QString::number(superAlternativ) + ", Jahrgang = " + QString::number(_admin->getJahrgang()->getID()) + " WHERE ID = " + QString::number(_id) + ";";
-    bool qryResult = db.open();
-    QSqlQuery qry;
-
-    qryResult = qry.exec(sqlQuery);
-    db.close();
-    return qryResult;
-}
-*/
-
-/*
  * Datenbankbefehl zum Aendern eines Benutzers
  * Autor: Lars
  */
@@ -622,30 +467,4 @@ bool SQLQuery::dbUpdateZitat(Zitat *_zitat, int _id)
     qryResult = qry.exec(sqlQuery);
     db.close();
     return qryResult;
-}
-
-bool SQLQuery::checkAlreadyVoted(int _benutzerID, int _zitatID)
-{
-    bool didVote=false;
-
-    QString sqlQuery;
-    bool qryResult = db.open();
-    QSqlQuery qry;
-
-    sqlQuery = "SELECT * FROM tblDownvotes WHERE BenutzerID="+QString::number(_benutzerID)+" AND ZitatID="+QString::number(_zitatID);
-    qryResult = qry.exec(sqlQuery);
-    if (qryResult)
-    {
-        didVote=true;
-    }
-
-    sqlQuery = "SELECT * FROM tblDUpvotes WHERE BenutzerID="+QString::number(_benutzerID)+" AND ZitatID="+QString::number(_zitatID);
-    qryResult = qry.exec(sqlQuery);
-    if (qryResult)
-    {
-        didVote=true;
-    }
-    db.close();
-
-    return didVote;
 }

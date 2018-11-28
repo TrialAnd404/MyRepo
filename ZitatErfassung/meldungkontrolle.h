@@ -15,6 +15,7 @@ public:
     ~MeldungKontrolle();
     bool sendeMeldung(Zitat* _zitatID, QString _grund);
     QVector<Meldung*> holeMeldung();
+    bool loescheMeldung(Meldung* _meldungID);
 private:
     SQLQuery* dbConnector;
 };

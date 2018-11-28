@@ -7,6 +7,10 @@
 #include "frmhauptmenueadmin.h"
 #include "frmhauptmenueuser.h"
 
+/*
+ * Oberfläche zum Anmelden
+ * Autor: Pascal
+ */
 namespace Ui {
 class frmAnmelden;
 }

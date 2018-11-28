@@ -32,7 +32,16 @@ bool MeldungKontrolle::sendeMeldung(Zitat* _zitat, QString _grund)
 
 }
 
+/*
+ * Holen aller Meldungen aus der Datenbank
+ * Autor: Lars
+ */
 QVector<Meldung *> MeldungKontrolle::holeMeldung()
 {
     return this->dbConnector->dbSelectMeldung();
+}
+
+bool MeldungKontrolle::loescheMeldung(Meldung *_meldungID)
+{
+    return this->dbConnector->dbDelete("tblMeldung", _meldungID->getID());
 }

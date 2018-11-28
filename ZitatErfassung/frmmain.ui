@@ -6,35 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1144</width>
-    <height>724</height>
+    <width>483</width>
+    <height>347</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>frmMain</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pbStarten">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>70</y>
-      <width>541</width>
-      <height>311</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Starten</string>
-    </property>
-   </widget>
-  </widget>
+  <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1144</width>
-     <height>21</height>
+     <width>483</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuZitat_Erfassung">

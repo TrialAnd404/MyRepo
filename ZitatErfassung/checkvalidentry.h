@@ -11,7 +11,7 @@ public:
     bool CheckValidName(QString p_entry);
     bool CheckValidZitat(QString p_entry);
 private:
-    bool isValid = true;
+    bool isValid;
 };
 
 #endif // CHECKVALIDENTRY_H

@@ -4,6 +4,10 @@
 #include <frmhauptmenueuser.h>
 #include <QMessageBox>
 
+/*
+ * Konstruktor
+ * Autor: Pascal
+ */
 frmAnmelden::frmAnmelden(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::frmAnmelden)
@@ -12,11 +16,19 @@ frmAnmelden::frmAnmelden(QWidget *parent) :
     ui->ldtPasswort->setEchoMode(QLineEdit::Password);
 }
 
+/*
+ * Destruktor
+ * Autor: Pascal
+ */
 frmAnmelden::~frmAnmelden()
 {
     delete ui;
 }
 
+/*
+ * Knopf Anmelden
+ * Autor: Pascal
+ */
 void frmAnmelden::on_pbLogin_clicked()
 {
 
@@ -26,20 +38,19 @@ void frmAnmelden::on_pbLogin_clicked()
 
     if (login->checkLoginCredentials(user, passwrd))
     {
+        this->close();
         if (SessionInfo::getSessionInfo()->getAktNutzer()->getAdmin())
         {
-            frmHauptmenueAdmin hauptmenueAdmin(NULL, this);
+            frmHauptmenueAdmin hauptmenueAdmin(this);
             hauptmenueAdmin.setModal(true);
             hauptmenueAdmin.exec();
         }
         else
         {
-            frmHauptmenueUser hauptmenueBenutzer(NULL, this);
+            frmHauptmenueUser hauptmenueBenutzer(this);
             hauptmenueBenutzer.setModal(true);
             hauptmenueBenutzer.exec();
         }
-        //TODO: Etwas in der Art von Username setzen & an die frmMain
-        //weitergeben (bzw das Userhauptmenu)
     }
     else
     {
@@ -48,4 +59,5 @@ void frmAnmelden::on_pbLogin_clicked()
         msgBox.exec();
     }
     delete login;
+
 }

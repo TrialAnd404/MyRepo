@@ -13,7 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        frmmain.cpp \
     benutzer.cpp \
     zitat.cpp \
     orgeinheit.cpp \
@@ -42,7 +41,7 @@ SOURCES += main.cpp\
     frmmeldunganzeigen.cpp \
     frmbenutzerimport.cpp
 
-HEADERS  += frmmain.h \
+HEADERS  += \
     benutzer.h \
     zitat.h \
     orgeinheit.h \
@@ -72,7 +71,7 @@ HEADERS  += frmmain.h \
     frmbenutzerimport.h
 
 
-FORMS    += frmmain.ui \
+FORMS    += \
     frmanmelden.ui \
     frmzitatanzeigen.ui \
     frmzitatverwalten.ui \

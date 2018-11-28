@@ -47,6 +47,7 @@ void frmZitatAendern::on_btnAendern_clicked()
     zit->setInhalt(ui->edtZitat->text());
     if (this->zitKontr->aendereZitat(this->zit))
     {
+
         this->close();
     }
 }

@@ -49,7 +49,7 @@ void frmZitatEintragen::on_pbMenue_clicked()
  */
 void frmZitatEintragen::on_pbSpeichern_clicked()
 {
-    bool klappt = zk->legeZitatAn(ui->edtZitat->text(),ui->edtRedner->text(),ui->deDatum->date() );
+    zk->legeZitatAn(ui->edtZitat->text(),ui->edtRedner->text(),ui->deDatum->date() );
 }
 
 /*

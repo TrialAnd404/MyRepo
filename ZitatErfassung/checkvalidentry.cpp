@@ -2,11 +2,12 @@
 
 CheckValidEntry::CheckValidEntry()
 {
-
+    this->isValid = true;
 }
 
 bool CheckValidEntry::CheckValidName(QString p_entry)
 {
+    this->isValid = true;
     for (int i =0; i<p_entry.size(); i++)
     {
         if (!p_entry[i].isLetterOrNumber())

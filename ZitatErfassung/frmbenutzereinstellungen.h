@@ -7,8 +7,10 @@
 #include "sessioninfo.h"
 #include "benutzerkontrolle.h"
 
-//TODO: include datenbankverbindung -> für speichern
-
+/*
+ * Oberfläche zum Verwalten der persönlichen Benutzerdaten
+ * Autor: Üascal
+ */
 namespace Ui {
 class frmBenutzerEinstellungen;
 }

@@ -5,6 +5,10 @@
 
 #include "benutzer.h"
 
+/*
+ * Oberfläche des Hauptmenus für User
+ * Autor: Pascal
+ */
 namespace Ui {
 class frmHauptmenueUser;
 }
@@ -14,7 +18,7 @@ class frmHauptmenueUser : public QDialog
     Q_OBJECT
 
 public:
-    explicit frmHauptmenueUser(Benutzer* currentUser, QWidget *parent = 0);
+    explicit frmHauptmenueUser(QWidget *parent = 0);
     ~frmHauptmenueUser();
 
 private slots:

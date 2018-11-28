@@ -5,6 +5,10 @@
 #include "meldungkontrolle.h"
 #include "frmzitataendern.h"
 
+/*
+ * Klasse zum Anzeigen und Bearbeiten der Meldungen
+ * Autor: Lars
+ */
 namespace Ui {
 class FrmMeldungAnzeigen;
 }
@@ -23,6 +27,8 @@ private slots:
     void on_btnBeenden_clicked();
 
     void on_btnBearbeiten_clicked();
+
+    void on_btnLoeschen_clicked();
 
 private:
     Ui::FrmMeldungAnzeigen *ui;

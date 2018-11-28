@@ -1,6 +1,10 @@
 #include "frmbenutzerimport.h"
 #include "ui_frmbenutzerimport.h"
 
+/*
+ * Konstruktor
+ * Autor: Lars
+ */
 FrmBenutzerImport::FrmBenutzerImport(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::FrmBenutzerImport)
@@ -9,17 +13,30 @@ FrmBenutzerImport::FrmBenutzerImport(QWidget *parent) :
     this->benKontr = new BenutzerKontrolle();
 }
 
+/*
+ * Destruktor
+ * Autor: Lars
+ */
 FrmBenutzerImport::~FrmBenutzerImport()
 {
     delete ui;
     delete benKontr;
 }
 
+/*
+ * Schließen des Fensters
+ * Autor: Lars
+ */
 void FrmBenutzerImport::on_btnZurueck_clicked()
 {
     this->close();
 }
 
+/*
+ * Importieren der Benutzer aus einem Text
+ * bspw: Vorname,Nachname,Benutzername,Passwort,Bezeichnung OrgEinheit,Jahr OrgEinheit;
+ * Autor: Lars
+ */
 void FrmBenutzerImport::on_btnImport_clicked()
 // Luca,Keller,lucak,test,10FIAE,2018;Yannik,Limbach,yannikl,test,10FIAE,2018
 {

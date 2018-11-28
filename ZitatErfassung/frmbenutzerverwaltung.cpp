@@ -102,17 +102,17 @@ void frmBenutzerVerwaltung::on_pbSuchen_clicked()
         for (int i = 0; i < this->benListe.length(); i++)
         {
             Benutzer* ben = this->benListe[i];
-            if (ben->getVorname().contains(suchwort))
+            if (ben->getVorname().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(ben);
                 continue;
             }
-            else if (ben->getNachname().contains(suchwort))
+            else if (ben->getNachname().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(ben);
                 continue;
             }
-            else if (ben->getNutzername().contains(suchwort))
+            else if (ben->getNutzername().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(ben);
                 continue;
@@ -150,6 +150,10 @@ void frmBenutzerVerwaltung::baueUI()
     }
 }
 
+/*
+ * Öffnen eines Fensters zum Importieren von Benutzern
+ * Autor: Lars
+ */
 void frmBenutzerVerwaltung::on_btnImport_clicked()
 {
     FrmBenutzerImport nutzerImport;

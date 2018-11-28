@@ -1,6 +1,10 @@
 #include "frmbenutzereinstellungen.h"
 #include "ui_frmbenutzereinstellungen.h"
 
+/*
+ * Kontruktor
+ * Autor: Pascal
+ */
 frmBenutzerEinstellungen::frmBenutzerEinstellungen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::frmBenutzerEinstellungen)
@@ -8,33 +12,40 @@ frmBenutzerEinstellungen::frmBenutzerEinstellungen(QWidget *parent) :
     ui->setupUi(this);
     this->benKontr = new BenutzerKontrolle();
     this->baueUI();
-
-    //###################################################
-    //#
-    //#      TODO: Vielleicht schon bei Start des Fensters
-    //#      Daten aus DB auslesen und LineEdits damit füttern?
-    //#      Dann umgeht man später beim Speichern das Problem
-    //#      Wenn ein User seinen Namen gar nicht ändern möchte,
-    //#      Aber trotzdem auf eine korekte Eingabe abgefragt wird.
-
 }
 
+/*
+ * Destruktor
+ * Autor: Pascal
+ */
 frmBenutzerEinstellungen::~frmBenutzerEinstellungen()
 {
     delete ui;
     delete benKontr;
 }
 
+/*
+ * Beenden der Anwendung
+ * Autor: Pascal
+ */
 void frmBenutzerEinstellungen::on_pbBeenden_clicked()
 {
     qApp->quit();
 }
 
+/*
+ * Schließen des Fensters
+ * Autor: Pascal
+ */
 void frmBenutzerEinstellungen::on_pbMenue_clicked()
 {
     this->close();
 }
 
+/*
+ * Speichern der neuen Benutzerdaten
+ * Autor: Tim
+ */
 void frmBenutzerEinstellungen::on_pbSpeichern_clicked()
 {
     Benutzer* aktNutzer = SessionInfo::getSessionInfo()->getAktNutzer();
@@ -97,6 +108,10 @@ void frmBenutzerEinstellungen::on_pbSpeichern_clicked()
     delete entryCheck;
 }
 
+/*
+ * Methode zum Initialisieren der Werte auf der Oberfläche
+ * Autor: Pascal
+ */
 void frmBenutzerEinstellungen::baueUI()
 {
     Benutzer* aktNutzer = SessionInfo::getSessionInfo()->getAktNutzer();

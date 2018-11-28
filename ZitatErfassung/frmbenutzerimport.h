@@ -4,6 +4,10 @@
 #include <QDialog>
 #include "benutzerkontrolle.h"
 
+/*
+ * Oberfläche zum Importieren von Benutzern aus einem Text
+ * Autor: Lars
+ */
 namespace Ui {
 class FrmBenutzerImport;
 }

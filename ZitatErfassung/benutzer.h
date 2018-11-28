@@ -20,9 +20,6 @@ private:
     OrgEinheit* jahrgang;
     bool admin;
     bool deaktiviert;
-//    QVector<Zitat*> eingetrageneZitate;
-//    QVector<Zitat*> upvote;
-//    QVector<Zitat*> downvote;
 public:
     Benutzer();
     Benutzer(QString p_nutzername, QString p_passwort, QString p_vorname, QString p_nachname, OrgEinheit* p_jahrgang);

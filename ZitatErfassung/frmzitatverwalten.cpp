@@ -79,21 +79,21 @@ void frmZitatVerwalten::on_pbSuchen_clicked()
         this->suchListe.clear();
         for (int i = 0; i < zitListe.length(); i++)
         {
-            if (zitListe[i]->getInhalt().contains(suchwort))
+            if (zitListe[i]->getInhalt().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(zitListe[i]);
                 continue;
             }
-            if (zitListe[i]->getRedner().contains(suchwort))
+            if (zitListe[i]->getRedner().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(zitListe[i]);
                 continue;
             }
-            /* if (zitListe[i]->getOrgEinheit()->getBezeichnung().contains(suchwort))
+            if (zitListe[i]->getOrgEinheit()->getBezeichnung().contains(suchwort, Qt::CaseInsensitive))
             {
                 this->suchListe.append(zitListe[i]);
                 continue;
-            } */
+            }
         }
     }
     this->baueUI();
@@ -118,7 +118,7 @@ void frmZitatVerwalten::baueUI()
     for (int i = 0; i < this->suchListe.length(); i++)
     {
         Zitat* zit = this->suchListe[i];
-        ui->lwAnzeigen->addItem(zit->getDatum().toString() + ", " + /* zit->getOrgEinheit()->getBezeichnung()  */+ ", " + zit->getRedner()
+        ui->lwAnzeigen->addItem(zit->getDatum().toString() + ", " + zit->getOrgEinheit()->getBezeichnung() + ", " + zit->getRedner()
                                 + ":\r\n" + zit->getInhalt());
     }
 }
