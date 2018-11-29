@@ -48,9 +48,14 @@ void FrmMeldungAnzeigen::on_btnBeenden_clicked()
  */
 void FrmMeldungAnzeigen::on_btnBearbeiten_clicked()
 {
+    int aktRow = ui->lwAusgabe->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
     frmZitatAendern aendereZitat;
     aendereZitat.setModal(true);
-    aendereZitat.setZitat(this->meldListe[ui->lwAusgabe->currentRow()]->getZitat());
+    aendereZitat.setZitat(this->meldListe[aktRow]->getZitat());
     aendereZitat.exec();
 }
 
@@ -69,7 +74,12 @@ void FrmMeldungAnzeigen::baueUI()
 
 void FrmMeldungAnzeigen::on_btnLoeschen_clicked()
 {
-    if (this->meldKontr->loescheMeldung(this->meldListe[ui->lwAusgabe->currentRow()]))
+    int aktRow = ui->lwAusgabe->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
+    if (this->meldKontr->loescheMeldung(this->meldListe[aktRow]))
     {
         this->baueUI();
     }

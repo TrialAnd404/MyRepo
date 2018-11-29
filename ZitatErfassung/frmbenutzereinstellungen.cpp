@@ -115,11 +115,20 @@ void frmBenutzerEinstellungen::on_pbSpeichern_clicked()
 void frmBenutzerEinstellungen::baueUI()
 {
     Benutzer* aktNutzer = SessionInfo::getSessionInfo()->getAktNutzer();
+    QString benutzerTyp;
+    if (aktNutzer->getAdmin())
+    {
+        benutzerTyp = "Admin";
+    }
+    else
+    {
+        benutzerTyp = "Benutzer";
+    }
     ui->edtVorname->setText(aktNutzer->getVorname());
     ui->edtNachname->setText(aktNutzer->getNachname());
     ui->edtJahrgang->setText(aktNutzer->getJahrgang()->getBezeichnung() + ", " + aktNutzer->getJahrgang()->getJahr());
     ui->edtJahrgang->setEnabled(false);
-    //ui->edtBenutzertyp->setText();
+    ui->edtBenutzertyp->setText(benutzerTyp);
     ui->edtBenutzertyp->setEnabled(false);
     ui->edtBenutzername->setText(aktNutzer->getNutzername());
     ui->edtPasswort->setText(aktNutzer->getPasswort());

@@ -108,8 +108,12 @@ void frmJahrgaengeVerwalten::on_pbSuchen_clicked()
  */
 void frmJahrgaengeVerwalten::on_pbLoeschen_clicked()
 {
-    int index = ui->lwAusgabe->currentRow();
-    this->oeKontr->loescheOE(this->suchListe[index]);
+    int aktRow = ui->lwAusgabe->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
+    this->oeKontr->loescheOE(this->suchListe[aktRow]);
 }
 
 /*
@@ -118,9 +122,13 @@ void frmJahrgaengeVerwalten::on_pbLoeschen_clicked()
  */
 void frmJahrgaengeVerwalten::on_pbAendern_clicked()
 {
-    int index = ui->lwAusgabe->currentRow();
+    int aktRow = ui->lwAusgabe->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
     frmJahrgangAendern frmOeAendern;
-    frmOeAendern.setOE(this->suchListe[index]);
+    frmOeAendern.setOE(this->suchListe[aktRow]);
     frmOeAendern.setModal(true);
     frmOeAendern.exec();
 }

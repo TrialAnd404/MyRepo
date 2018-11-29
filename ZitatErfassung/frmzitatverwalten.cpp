@@ -39,8 +39,13 @@ void frmZitatVerwalten::on_pbMenue_clicked()
  */
 void frmZitatVerwalten::on_pbAendern_clicked()
 {
+    int aktRow = ui->lwAnzeigen->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
     frmZitatAendern aendernDialog;
-    aendernDialog.setZitat(this->suchListe[ui->lwAnzeigen->currentRow()]);
+    aendernDialog.setZitat(this->suchListe[aktRow]);
     aendernDialog.setModal(true);
     aendernDialog.exec();
 }
@@ -53,6 +58,10 @@ void frmZitatVerwalten::on_pbLoeschen_clicked()
 {
     //Löschen aus DB
     int aktRow = ui->lwAnzeigen->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
     Zitat* zit = this->suchListe[aktRow];
     if (this->zitKontr->loescheZitat(zit))
     {
@@ -136,6 +145,10 @@ void frmZitatVerwalten::fuelleOe()
     }
 }
 
+/*
+ * Exportieren der aktuellen Zitatliste
+ * Autor: Tim
+ */
 void frmZitatVerwalten::on_pbDownload_clicked()
 {
     this->zitKontr->zitateDownload();

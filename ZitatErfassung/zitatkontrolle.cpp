@@ -72,6 +72,10 @@ bool ZitatKontrolle::aendereZitat(Zitat *_zit)
     return this->dbConnector->dbUpdateZitat(_zit, _zit->getID());
 }
 
+/*
+ * Download/Export von Zitaten
+ * Autor: Tim
+ */
 bool ZitatKontrolle::zitateDownload()
 {
     QVector<OrgEinheit *> orgeinheitListe = this->holeOE();

@@ -35,8 +35,6 @@ private slots:
 
     void on_btnMelden_clicked();
 
-    void on_pbExport_clicked();
-
 private:
     Ui::frmZitatAnzeigen *ui;
     ZitatKontrolle* zitKontr;
