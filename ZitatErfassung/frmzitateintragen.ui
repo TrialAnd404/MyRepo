@@ -126,7 +126,7 @@
      <x>130</x>
      <y>0</y>
      <width>141</width>
-     <height>16</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -183,10 +183,6 @@
    </property>
    <property name="text">
     <string>Speichern</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>Bilder/Download.png</normaloff>Bilder/Download.png</iconset>
    </property>
   </widget>
   <widget class="QLineEdit" name="edtOrgEinheit">

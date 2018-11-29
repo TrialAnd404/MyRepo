@@ -135,3 +135,8 @@ void frmZitatVerwalten::fuelleOe()
         ui->cbOrgEinheit->addItem(oeListe[i]->getBezeichnung() + ", " + oeListe[i]->getJahr());
     }
 }
+
+void frmZitatVerwalten::on_pbDownload_clicked()
+{
+    this->zitKontr->zitateDownload();
+}

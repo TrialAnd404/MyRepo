@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>341</height>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pbZitatEintragen">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>110</y>
+     <x>60</x>
+     <y>80</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -29,8 +29,8 @@
   <widget class="QPushButton" name="pbZitatAnzeigen">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>150</y>
+     <x>60</x>
+     <y>120</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -42,8 +42,8 @@
   <widget class="QPushButton" name="pbBenutzerEinstellungen">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>190</y>
+     <x>60</x>
+     <y>160</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -78,32 +78,6 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_2">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>50</y>
-     <width>401</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>10</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Hauptmenü&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pbBeenden">
    <property name="geometry">
     <rect>
@@ -120,8 +94,8 @@
   <widget class="QPushButton" name="pbZitatVerwalten">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>110</y>
+     <x>200</x>
+     <y>80</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -133,8 +107,8 @@
   <widget class="QPushButton" name="pbJahrgaengeVerwalten">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>150</y>
+     <x>200</x>
+     <y>120</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -146,8 +120,8 @@
   <widget class="QPushButton" name="pbBenutzerVerwaltung">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>190</y>
+     <x>200</x>
+     <y>160</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -159,14 +133,40 @@
   <widget class="QPushButton" name="btnMeldungenVerwalten">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>220</y>
+     <x>200</x>
+     <y>190</y>
      <width>131</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
     <string>Meldungen verwalten</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>25</y>
+     <width>401</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Hauptmenü - Admin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

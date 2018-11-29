@@ -32,6 +32,10 @@ private slots:
 
     void on_pbBeenden_clicked();
 
+    void on_pbImport_clicked();
+
+    void on_pbDownload_clicked();
+
 private:
     Ui::frmZitatVerwalten *ui;
     ZitatKontrolle* zitKontr;
