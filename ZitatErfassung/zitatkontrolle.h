@@ -3,6 +3,9 @@
 
 #include <QString>
 #include <QDate>
+#include <QTextStream>
+#include <QFile>
+
 #include "orgeinheit.h"
 #include "sessioninfo.h"
 #include "zitat.h"
@@ -22,6 +25,7 @@ public:
     bool loescheZitat(Zitat* _zit);
     QVector<OrgEinheit*> holeOE();
     bool aendereZitat(Zitat* _zit);
+    bool zitateDownload();
 private:
     SQLQuery* dbConnector;
 };

@@ -115,3 +115,18 @@ void Zitat::setDownvote(QVector<Benutzer *> p_downvote)
 {
     this->downvote = p_downvote;
 }
+
+QString Zitat::toCSV()
+{
+    QString result = "";
+    result += this->getInhalt() + ",";
+    result += this->getRedner()+ ",";
+    result += this->getEingetragenVon()->getNutzername() + ",";
+    result += QString::number(this->getUpvote().size()) + ",";
+    return result;
+    /*
+    Format so okay? Kann geändert werden...
+    Zitat    , Redner  , User, Upvotes
+    Blablabla, Herr Bla, Tim, 15
+    */
+}
