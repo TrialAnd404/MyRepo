@@ -42,6 +42,7 @@ public:
     void setUpvote(QVector<Benutzer*> p_upvote);
     QVector<Benutzer*> getDownvote();
     void setDownvote(QVector<Benutzer*> p_downvote);
+    QString toCSV();
 };
 
 #endif // ZITAT_H
