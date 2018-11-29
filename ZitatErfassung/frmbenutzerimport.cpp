@@ -38,7 +38,6 @@ void FrmBenutzerImport::on_btnZurueck_clicked()
  * Autor: Lars
  */
 void FrmBenutzerImport::on_btnImport_clicked()
-// Luca,Keller,lucak,test,10FIAE,2018;Yannik,Limbach,yannikl,test,10FIAE,2018
 {
     QVector<QString> fehlerListe;
     QVector<OrgEinheit*> orgListe = this->benKontr->holeOE();

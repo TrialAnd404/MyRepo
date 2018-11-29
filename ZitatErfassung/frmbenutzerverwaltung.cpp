@@ -59,8 +59,13 @@ void frmBenutzerVerwaltung::on_pbBenutzerAnlegen_clicked()
  */
 void frmBenutzerVerwaltung::on_pbBearbeiten_clicked()
 {
+    int aktRow = ui->lwAnzeigen->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
     frmBenutzerAendern frmNutzerAendern;
-    frmNutzerAendern.setBenutzer(this->benListe[ui->lwAnzeigen->currentRow()]);
+    frmNutzerAendern.setBenutzer(this->benListe[aktRow]);
     frmNutzerAendern.setModal(true);
     frmNutzerAendern.exec();
 }
@@ -71,7 +76,12 @@ void frmBenutzerVerwaltung::on_pbBearbeiten_clicked()
  */
 void frmBenutzerVerwaltung::on_pbLoeschen_clicked()
 {
-    if (this->benKontr->loescheBenutzer(this->benListe[ui->lwAnzeigen->currentRow()]))
+    int aktRow = ui->lwAnzeigen->currentRow();
+    if (aktRow < 0)
+    {
+        return;
+    }
+    if (this->benKontr->loescheBenutzer(this->benListe[aktRow]))
     {
         this->baueUI();
     }

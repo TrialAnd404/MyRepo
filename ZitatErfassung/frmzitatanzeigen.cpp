@@ -152,8 +152,3 @@ void frmZitatAnzeigen::on_btnMelden_clicked()
     meldenDialog.setModal(true);
     meldenDialog.exec();
 }
-
-void frmZitatAnzeigen::on_pbExport_clicked()
-{
-    //TODO
-}
