@@ -114,4 +114,5 @@ bool ZitatKontrolle::zitateDownload()
          * Zusammengefasst in ein File streamen.
         */
     }
+    return true;
 }
